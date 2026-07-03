@@ -1,0 +1,632 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="robots" content="noindex, nofollow">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>TravelWings — Nha Trang Workcation 2026</title>
+<!-- Zero external requests: system font stack (offline + máy bay safe) -->
+<style>
+:root{--bg:#06060a;--s:rgba(255,255,255,0.03);--g:rgba(255,255,255,0.05);--g2:rgba(255,255,255,0.07);--b:rgba(255,255,255,0.07);--b2:rgba(255,255,255,0.12);--a:#5ad1ff;--ag:rgba(90,209,255,0.12);--o:#ff7a59;--og:rgba(255,122,89,0.12);--gr:#7dffaa;--grg:rgba(125,255,170,0.1);--p:#c084fc;--pg:rgba(192,132,252,0.1);--gd:#fbbf24;--gdg:rgba(251,191,36,0.12);--rd:#ff5470;--rdg:rgba(255,84,112,0.14);--t:#f0f0f5;--m:#8a8a99;--d:#50506a;--r:16px;--sm:10px}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,'Helvetica Neue',Arial,sans-serif;background:var(--bg);color:var(--t);line-height:1.55;overflow-x:hidden}
+a{color:var(--a);text-decoration:none;transition:opacity .2s}a:hover{opacity:.8;text-decoration:underline}
+
+/* Ambient orbs */
+.orb{position:fixed;border-radius:50%;filter:blur(140px);opacity:.22;pointer-events:none;z-index:0}
+.o1{width:700px;height:700px;background:radial-gradient(circle,rgba(90,209,255,.18),transparent 70%);top:-250px;right:-150px}
+.o2{width:550px;height:550px;background:radial-gradient(circle,rgba(255,122,89,.14),transparent 70%);bottom:-200px;left:-100px}
+.o3{width:400px;height:400px;background:radial-gradient(circle,rgba(251,191,36,.1),transparent 70%);top:40%;left:50%;transform:translateX(-50%)}
+
+.w{max-width:920px;margin:0 auto;padding:40px 20px 80px;position:relative;z-index:1}
+
+/* Theme toggle */
+.theme-btn{position:fixed;top:16px;right:16px;z-index:100;width:36px;height:36px;border-radius:50%;border:1px solid var(--b);background:var(--g);cursor:pointer;font-size:16px;display:flex;align-items:center;justify-content:center;backdrop-filter:blur(20px);transition:all .2s}
+.theme-btn:hover{background:var(--g2);border-color:var(--b2);transform:scale(1.1)}
+
+/* Hero */
+.hero{position:relative;border-radius:var(--r);overflow:hidden;margin-bottom:24px;min-height:260px;display:flex;align-items:flex-end;background:linear-gradient(135deg,#0a2e28,#0a1628,#06060a)}
+.hero::before{content:'';position:absolute;inset:0;background:linear-gradient(0deg,rgba(6,6,10,0.9) 0%,rgba(6,6,10,0.3) 50%,transparent 100%)}
+.hero-c{position:relative;z-index:2;padding:32px;width:100%}
+.badge{display:inline-flex;align-items:center;gap:6px;background:rgba(255,255,255,0.08);border:1px solid rgba(255,255,255,0.15);border-radius:999px;padding:6px 16px;font-size:11px;font-weight:600;color:var(--a);text-transform:uppercase;letter-spacing:2px;margin-bottom:14px;backdrop-filter:blur(20px)}
+.hero h1{font-size:clamp(30px,6vw,46px);font-weight:900;letter-spacing:-2px;line-height:1.05;margin-bottom:6px;color:#fff}
+.hero .sub{font-size:14px;color:rgba(255,255,255,0.6)}
+
+/* Animated route squiggle in hero */
+.plane-wrap{position:absolute;inset:0;z-index:1;pointer-events:none;overflow:hidden}
+.contrail{fill:none;stroke:url(#trailGrad);stroke-width:2;stroke-dasharray:400;stroke-dashoffset:400;animation:drawTrail 8s ease-in-out infinite}
+@keyframes drawTrail{0%{stroke-dashoffset:400}50%{stroke-dashoffset:0}100%{stroke-dashoffset:-400}}
+
+/* Stats */
+.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin-bottom:20px}
+.st{background:var(--g);border:1px solid var(--b);border-radius:var(--sm);padding:14px;text-align:center;transition:all .25s;backdrop-filter:blur(12px);box-shadow:0 4px 24px rgba(0,0,0,0.2),inset 0 1px 0 rgba(255,255,255,0.04)}
+.st:hover{background:var(--g2);transform:translateY(-2px)}
+.stv{font-size:24px;font-weight:900;letter-spacing:-1px}
+.stv.b{color:var(--a)}.stv.o{color:var(--o)}.stv.g{color:var(--gr)}.stv.p{color:var(--p)}.stv.gd{color:var(--gd)}
+.stl{font-size:9px;text-transform:uppercase;letter-spacing:1.2px;color:var(--d);font-weight:600;margin-top:2px}
+
+/* Section headers */
+.sec{display:flex;align-items:center;gap:10px;margin:28px 0 12px}
+.sec h2{font-size:16px;font-weight:800;letter-spacing:-0.3px;white-space:nowrap}
+.sec .ln{flex:1;height:1px;background:linear-gradient(90deg,var(--b),transparent)}
+.sec .tiny{font-size:10px;color:var(--d);white-space:nowrap}
+
+/* Tag pills (shared) */
+.tag{font-size:8px;font-weight:700;padding:2px 6px;border-radius:999px;margin-left:6px;text-transform:uppercase;letter-spacing:.4px;display:inline-block}
+.tag.w{color:var(--o);background:var(--og)}
+.tag.q{color:var(--rd);background:var(--rdg)}
+.tag.ok{color:var(--gr);background:var(--grg)}
+
+/* QA gate callout */
+.qa{background:linear-gradient(135deg,rgba(255,84,112,0.07),rgba(255,122,89,0.04));border:1px solid rgba(255,84,112,0.22);border-radius:var(--r);padding:18px 20px;margin-bottom:22px;backdrop-filter:blur(16px)}
+.qa h3{font-size:13px;font-weight:800;margin-bottom:10px;display:flex;align-items:center;gap:8px}
+.qa-item{display:flex;gap:10px;font-size:12px;color:var(--m);padding:5px 0}
+.qa-item b{color:var(--t);font-weight:700}
+.qa-verdict{margin-top:10px;padding-top:10px;border-top:1px solid rgba(255,255,255,0.08);font-size:11px;color:var(--gr)}
+
+/* Event banner */
+.banner{border-radius:var(--r);padding:26px;margin-bottom:22px;position:relative;overflow:hidden;backdrop-filter:blur(20px);box-shadow:0 4px 24px rgba(0,0,0,0.2),inset 0 1px 0 rgba(255,255,255,0.04)}
+.banner::after{content:'';position:absolute;top:0;left:-200%;width:200%;height:100%;background:linear-gradient(90deg,transparent,rgba(255,255,255,0.02),transparent);animation:shimmer 6s ease-in-out infinite}
+@keyframes shimmer{0%{left:-200%}100%{left:200%}}
+.banner-top{display:flex;align-items:center;gap:12px;margin-bottom:4px;position:relative}
+.banner-logo{width:34px;height:34px;border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:18px;background:rgba(255,255,255,0.06)}
+.banner-title{font-size:21px;font-weight:800;letter-spacing:-0.4px}
+.banner-title span{text-shadow:0 0 20px currentColor}
+.bsub{font-size:12px;color:var(--m);margin:6px 0 14px;position:relative}
+.bgrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:8px;position:relative}
+.bd{display:flex;align-items:center;gap:8px;font-size:12px;color:var(--m)}
+.bd .bi{width:28px;height:28px;border-radius:7px;display:flex;align-items:center;justify-content:center;font-size:13px;flex-shrink:0}
+.bd strong{color:var(--t);display:block;font-size:12px}
+.bnote{margin-top:12px;font-size:11px;color:var(--d);position:relative;border-left:2px solid rgba(255,255,255,0.15);padding-left:10px}
+
+/* Flight cards */
+.fl{background:var(--g);border:1px solid var(--b);border-radius:var(--r);margin-bottom:8px;overflow:hidden;transition:all .25s;cursor:pointer;backdrop-filter:blur(12px);box-shadow:0 4px 24px rgba(0,0,0,0.2),inset 0 1px 0 rgba(255,255,255,0.04)}
+.fl:hover{background:var(--g2);border-color:var(--b2);transform:translateY(-1px)}
+.fl.on .fb{max-height:340px;opacity:1;padding:0 16px 12px}
+.fh{display:flex;align-items:center;justify-content:space-between;padding:13px 16px}
+.fhl{display:flex;align-items:center;gap:10px}
+.flogo{width:26px;height:26px;border-radius:6px;display:flex;align-items:center;justify-content:center;font-size:13px;background:rgba(255,255,255,0.06)}
+.fm h3{font-size:12px;font-weight:700}.fm .s{font-size:10px;color:var(--m)}
+.fhr{display:flex;align-items:center;gap:8px}
+.ftag{font-size:9px;font-weight:700;text-transform:uppercase;letter-spacing:.7px;padding:3px 8px;border-radius:999px;white-space:nowrap}
+.ftag.dp{color:var(--a);background:var(--ag)}.ftag.tr{color:var(--p);background:var(--pg)}
+.ftag.ar{color:var(--gr);background:var(--grg)}.ftag.rt{color:var(--o);background:var(--og)}
+.ftag.q{color:var(--rd);background:var(--rdg)}
+.chv{color:var(--d);transition:transform .3s;font-size:10px}.fl.on .chv{transform:rotate(90deg)}
+.fb{max-height:0;opacity:0;overflow:hidden;transition:all .35s;padding:0 16px}
+.fbi{border-top:1px solid var(--b);padding-top:8px}
+.dr{display:flex;justify-content:space-between;gap:12px;padding:3px 0;font-size:11px}.dr .l{color:var(--m);flex-shrink:0}.dr .v{font-weight:600;text-align:right}
+.mono{font-family:ui-monospace,Menlo,monospace;color:var(--a)}
+
+/* Hotel / childcare */
+.hotel{background:var(--g);border:1px solid var(--b);border-radius:var(--r);padding:16px 18px;margin-bottom:10px;display:flex;align-items:center;gap:12px;backdrop-filter:blur(12px);box-shadow:0 4px 24px rgba(0,0,0,0.2),inset 0 1px 0 rgba(255,255,255,0.04);transition:all .25s}
+.hotel:hover{background:var(--g2);transform:translateY(-1px)}
+.hotel-icon{width:32px;height:32px;border-radius:7px;display:flex;align-items:center;justify-content:center;font-size:18px;background:rgba(255,255,255,0.06);flex-shrink:0}
+.hotel-info h4{font-size:13px;font-weight:700;margin-bottom:1px}
+.hotel-info p{font-size:11px;color:var(--m)}
+.hotel-tag{margin-left:auto;font-size:9px;font-weight:700;padding:4px 9px;border-radius:999px;white-space:nowrap}
+.hotel-tag.ok{color:var(--gr);background:var(--grg)}
+.hotel-tag.w{color:var(--o);background:var(--og)}
+.hotel-tag.q{color:var(--rd);background:var(--rdg)}
+.backup-list{background:var(--g);border:1px solid var(--b);border-radius:var(--r);padding:12px 16px;margin-bottom:18px;backdrop-filter:blur(12px)}
+.backup-list .bl-h{font-size:11px;font-weight:700;color:var(--d);text-transform:uppercase;letter-spacing:.6px;margin-bottom:8px}
+.bl-row{display:flex;justify-content:space-between;gap:10px;font-size:12px;padding:6px 0;border-bottom:1px solid var(--s)}
+.bl-row:last-child{border:none}
+.bl-row .l{color:var(--t)}.bl-row .l small{display:block;color:var(--m);font-weight:400;font-size:10px;margin-top:1px}
+.bl-row .v{color:var(--m);text-align:right;font-size:11px;flex-shrink:0}
+
+/* Day selector */
+.dsel{display:flex;gap:6px;overflow-x:auto;padding:4px 0 8px;scrollbar-width:none}.dsel::-webkit-scrollbar{display:none}
+.db{flex-shrink:0;padding:10px 14px;background:var(--g);border:1px solid var(--b);border-radius:10px;cursor:pointer;text-align:center;transition:all .25s;min-width:84px;user-select:none}
+.db:hover{background:var(--g2);border-color:var(--b2)}
+.db.on{background:linear-gradient(135deg,rgba(125,255,170,0.1),rgba(90,209,255,0.06));border-color:rgba(125,255,170,0.25)}
+.db .dd{font-size:9px;font-weight:700;text-transform:uppercase;letter-spacing:1px;color:var(--d);margin-bottom:1px}
+.db.on .dd{color:var(--gr)}
+.db .dn{font-size:13px;font-weight:800;letter-spacing:-0.3px}
+.db .dt{font-size:8px;color:var(--d);margin-top:1px}
+.db.ev{position:relative}.db.ev::after{content:'';position:absolute;top:6px;right:6px;width:5px;height:5px;border-radius:50%;background:var(--gd)}
+.db.crit{position:relative}.db.crit::after{content:'';position:absolute;top:6px;right:6px;width:5px;height:5px;border-radius:50%;background:var(--rd)}
+
+/* Day content */
+.dc{background:var(--g);border:1px solid var(--b);border-radius:var(--r);padding:20px;margin-bottom:18px;min-height:180px;backdrop-filter:blur(12px);box-shadow:0 4px 24px rgba(0,0,0,0.2),inset 0 1px 0 rgba(255,255,255,0.04)}
+.dct{font-size:12px;font-weight:700;color:var(--a);text-transform:uppercase;letter-spacing:1px;margin-bottom:4px}
+.dcs{font-size:18px;font-weight:800;letter-spacing:-0.5px;margin-bottom:16px}
+.dci{display:flex;gap:14px;padding:6px 0;border-bottom:1px solid var(--s)}
+.dci:last-of-type{border:none}
+.dctm{font-family:ui-monospace,Menlo,monospace;font-size:11px;font-weight:700;color:var(--a);min-width:56px;flex-shrink:0}
+.dctx{font-size:12px;color:var(--m);line-height:1.5}
+.dcn{margin-top:12px;padding:10px 14px;background:rgba(255,255,255,0.03);border-radius:8px;font-size:11px;color:var(--d);border-left:2px solid var(--a)}
+
+/* Food (priority section) */
+.food-lede{font-size:12px;color:var(--m);margin-bottom:14px}
+.food-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:12px;margin-bottom:14px}
+.food-card{background:var(--g);border:1px solid var(--b);border-left:3px solid var(--gd);border-radius:var(--r);padding:16px;backdrop-filter:blur(12px);transition:all .25s;box-shadow:0 4px 24px rgba(0,0,0,0.2),inset 0 1px 0 rgba(255,255,255,0.04)}
+.food-card:hover{background:var(--g2);transform:translateY(-1px)}
+.food-card h4{font-size:13px;font-weight:700;margin-bottom:3px}
+.food-card .addr{font-size:10.5px;color:var(--m);margin-bottom:8px}
+.food-card .dish{font-size:12px;margin-bottom:8px}
+.food-card .dish b{color:var(--gd);font-weight:700}
+.food-card .preg{font-size:10px;color:var(--gr);background:var(--grg);padding:4px 8px;border-radius:6px;display:inline-block;line-height:1.4}
+.food-mini{background:var(--g);border:1px solid var(--b);border-radius:var(--r);padding:6px 16px;margin-bottom:18px;backdrop-filter:blur(12px)}
+.fm-row{display:flex;justify-content:space-between;gap:10px;font-size:11.5px;padding:8px 0;border-bottom:1px solid var(--s)}
+.fm-row:last-child{border:none}
+.fm-row .l b{color:var(--t)}.fm-row .l{color:var(--m)}.fm-row .v{color:var(--d);text-align:right;flex-shrink:0;font-size:10.5px}
+
+/* Budget */
+.price{background:var(--g);border:1px solid var(--b);border-radius:var(--r);padding:18px;margin-bottom:14px;backdrop-filter:blur(12px)}
+.price h3{font-size:14px;font-weight:700;margin-bottom:2px}
+.price .ph-note{font-size:10.5px;color:var(--d);margin-bottom:10px}
+.pr{display:flex;justify-content:space-between;gap:10px;padding:7px 0;border-bottom:1px solid var(--s);font-size:12px}
+.pr:last-of-type{border:none}
+.pr .l{color:var(--m)}.pr .l small{display:block;color:var(--d);font-weight:400;font-size:10px;margin-top:2px}
+.pr .v{font-weight:700;font-family:ui-monospace,Menlo,monospace;text-align:right;flex-shrink:0}
+.pr.total{border-top:1px solid var(--b);margin-top:4px;padding-top:10px}
+.pr.total .l{color:var(--t);font-weight:800}.pr.total .v{color:var(--a);font-size:14px}
+
+/* Checklists */
+.todo{background:var(--g);border:1px solid var(--b);border-radius:var(--r);padding:16px;margin-bottom:12px;backdrop-filter:blur(12px)}
+.todo h3{font-size:13px;font-weight:700;margin-bottom:8px}
+.tbar{height:4px;background:rgba(255,255,255,0.06);border-radius:2px;margin-bottom:4px;overflow:hidden}
+.tfill{height:100%;background:linear-gradient(90deg,var(--a),var(--gr));border-radius:2px;transition:width .4s}
+.tct{font-size:10px;color:var(--d);text-align:right;margin-bottom:8px}
+.ti{display:flex;align-items:flex-start;gap:10px;padding:7px 0;border-bottom:1px solid var(--s);cursor:pointer;transition:opacity .2s;user-select:none}
+.ti:last-child{border:none}
+.ti.done{opacity:.35;text-decoration:line-through}
+.tc{width:18px;height:18px;border-radius:50%;border:2px solid var(--d);display:flex;align-items:center;justify-content:center;font-size:10px;color:transparent;flex-shrink:0;margin-top:1px;transition:all .2s}
+.ti.done .tc{border-color:var(--gr);background:var(--grg);color:var(--gr)}
+.tt{font-size:12px;color:var(--m);line-height:1.5}
+
+/* Warnings */
+.warn-card{background:var(--g);border:1px solid var(--b);border-left:3px solid var(--o);border-radius:var(--r);padding:14px 16px;margin-bottom:10px;backdrop-filter:blur(12px)}
+.warn-card.crit{border-left-color:var(--rd)}
+.warn-card h4{font-size:13px;font-weight:700;margin-bottom:5px;display:flex;align-items:center;gap:8px}
+.warn-card p{font-size:11.5px;color:var(--m);line-height:1.55}
+
+/* Map */
+.map-card{background:var(--g);border:1px solid var(--b);border-radius:var(--r);overflow:hidden;margin-bottom:16px}
+.map-card svg{width:100%;display:block}
+.map-leg{display:flex;gap:12px;padding:10px 16px;border-top:1px solid var(--b);flex-wrap:wrap}
+.ml{display:flex;align-items:center;gap:5px;font-size:10px;color:var(--m)}
+.mld{width:6px;height:6px;border-radius:50%}
+.map-total{padding:8px 16px;font-size:10.5px;color:var(--d);border-top:1px solid var(--b)}
+
+/* Footer */
+.footer{text-align:center;padding:40px 0 20px;font-size:11px;color:var(--d)}
+.footer span{font-weight:700;color:var(--m)}
+
+/* Light mode */
+body.light{background:#f5f5f0;color:#1a1a2e}
+body.light .orb{opacity:.08}
+body.light .st,body.light .fl,body.light .hotel,body.light .dc,body.light .price,body.light .todo,body.light .map-card,body.light .banner,body.light .qa,body.light .food-card,body.light .food-mini,body.light .backup-list,body.light .warn-card{background:rgba(255,255,255,0.7);border-color:rgba(0,0,0,0.08);box-shadow:0 2px 12px rgba(0,0,0,0.06),inset 0 1px 0 rgba(255,255,255,0.8)}
+body.light .fl:hover,body.light .hotel:hover,body.light .food-card:hover{box-shadow:0 4px 20px rgba(0,0,0,0.1)}
+body.light .db{background:rgba(255,255,255,0.6);border-color:rgba(0,0,0,0.06)}
+body.light .db.on{background:rgba(125,255,170,0.08);border-color:rgba(125,255,170,0.2)}
+body.light .hero{background:linear-gradient(135deg,#cdeee0,#d5e8f5,#f5f5f0)}
+body.light .badge{background:rgba(0,0,0,0.05);border-color:rgba(0,0,0,0.1);color:#1a6b8a}
+body.light .hero h1{color:#1a1a2e}
+body.light .sec h2{color:#1a1a2e}
+body.light .stl,body.light .dd{color:#888}
+body.light .fm h3{color:#1a1a2e}
+body.light .tt{color:#555}
+body.light .footer{color:#999}
+
+@media(max-width:640px){
+  .stats{grid-template-columns:repeat(2,1fr)}
+  .bgrid{grid-template-columns:1fr}
+  .fh{flex-direction:column;align-items:flex-start;gap:6px}
+  .fhr{align-self:flex-end}
+  .bl-row,.fm-row,.pr{flex-direction:column;gap:2px}
+  .bl-row .v,.fm-row .v,.pr .v{text-align:left}
+}
+</style>
+</head>
+<body>
+
+<!-- Ambient orbs -->
+<div class="orb o1"></div>
+<div class="orb o2"></div>
+<div class="orb o3"></div>
+
+<!-- Theme toggle -->
+<button class="theme-btn" id="themeToggle">☀️</button>
+
+<div class="w">
+
+<!-- ===== HERO ===== -->
+<div class="hero">
+  <div class="plane-wrap">
+    <svg viewBox="0 0 900 260" style="width:100%;height:100%">
+      <defs><linearGradient id="trailGrad" x1="0" y1="0" x2="1" y2="0"><stop offset="0%" stop-color="transparent"/><stop offset="50%" stop-color="rgba(125,255,170,0.45)"/><stop offset="100%" stop-color="transparent"/></linearGradient></defs>
+      <path class="contrail" d="M-50,190 Q280,60 500,140 T950,110"/>
+      <g transform="translate(480,135) rotate(-12) scale(0.55)">
+        <path d="M0,0 L-8,4 L-25,15 L-27,12 L-12,4 L-30,4 L-35,10 L-37,9 L-33,2 L-37,0 L-33,-2 L-37,-9 L-35,-10 L-30,-4 L-12,-4 L-27,-12 L-25,-15 L-8,-4 Z" fill="rgba(255,255,255,0.85)" filter="drop-shadow(0 0 6px rgba(125,255,170,0.5))"/>
+      </g>
+    </svg>
+  </div>
+  <div class="hero-c">
+    <div class="badge">🌴 TravelWings</div>
+    <h1>Nha Trang · Workcation 5 tuần</h1>
+    <div class="sub">09/07 → 15/08+ 2026 · Đoàn 9 người · Trần Mạnh Đức &amp; gia đình</div>
+  </div>
+</div>
+
+<!-- ===== STATS ===== -->
+<div class="stats">
+  <div class="st"><div class="stv b">38</div><div class="stl">Ngày</div></div>
+  <div class="st"><div class="stv o">2</div><div class="stl">Nhóm di chuyển</div></div>
+  <div class="st"><div class="stv gd">1</div><div class="stl">Bootcamp</div></div>
+  <div class="st"><div class="stv g">🍜</div><div class="stl">Ưu tiên #1</div></div>
+</div>
+
+<!-- ===== QA GATE ===== -->
+<div class="qa">
+  <h3>⚡ 3 vấn đề đang chặn (xử lý tuần này)</h3>
+  <div class="qa-item"><span>❓</span><span><b>Vé bay nhóm 4</b> — chưa có mã/hãng/giờ chiều đi; chiều về chưa đặt</span></div>
+  <div class="qa-item"><span>❓</span><span><b>Số căn Mường Thanh Viễn Triều</b> chưa chốt → chưa đặt được chỗ ở</span></div>
+  <div class="qa-item"><span>⚠️</span><span><b>Giờ lái HN→Nha Trang</b> không xác minh được (cao tốc mới thông 18/5) → đã xử bằng 4 chặng có đệm</span></div>
+  <div class="qa-verdict">✅ Timing tổng: KHẢ THI — ô tô dư 2 ngày tới Đà Nẵng kịp pháo hoa; nhóm yếu (bà bầu + bé + người lớn tuổi) đi máy bay.</div>
+</div>
+
+<!-- ===== ROUTE MAP ===== -->
+<div class="sec"><h2>🗺️ Route ô tô — 4 chặng có đệm</h2><div class="ln"></div></div>
+<div class="map-card">
+  <svg viewBox="0 0 900 230">
+    <rect width="900" height="230" fill="#0d0d14"/>
+    <pattern id="gdots" x="0" y="0" width="30" height="30" patternUnits="userSpaceOnUse"><circle cx="15" cy="15" r="0.5" fill="rgba(255,255,255,0.04)"/></pattern>
+    <rect width="900" height="230" fill="url(#gdots)"/>
+
+    <path d="M 60,175 Q 145,130 230,110" fill="none" stroke="rgba(90,209,255,0.35)" stroke-width="2" stroke-dasharray="8,4"><animate attributeName="stroke-dashoffset" from="100" to="0" dur="3s" repeatCount="indefinite"/></path>
+    <path d="M 230,110 Q 325,120 420,150" fill="none" stroke="rgba(192,132,252,0.35)" stroke-width="2" stroke-dasharray="8,4"><animate attributeName="stroke-dashoffset" from="100" to="0" dur="3s" repeatCount="indefinite"/></path>
+    <path d="M 420,150 Q 515,95 610,70" fill="none" stroke="rgba(251,191,36,0.35)" stroke-width="2" stroke-dasharray="8,4"><animate attributeName="stroke-dashoffset" from="100" to="0" dur="3s" repeatCount="indefinite"/></path>
+    <path d="M 610,70 Q 715,90 820,140" fill="none" stroke="rgba(125,255,170,0.4)" stroke-width="2" stroke-dasharray="8,4"><animate attributeName="stroke-dashoffset" from="100" to="0" dur="3s" repeatCount="indefinite"/></path>
+
+    <circle cx="60" cy="175" r="6" fill="#5ad1ff"><animate attributeName="r" values="6;8;6" dur="2s" repeatCount="indefinite"/></circle>
+    <text x="60" y="200" fill="#8a8a99" font-size="10" font-family="system-ui" text-anchor="middle">HÀ NỘI</text>
+    <text x="60" y="212" fill="#50506a" font-size="8" font-family="system-ui" text-anchor="middle">09/07</text>
+
+    <circle cx="230" cy="110" r="5" fill="#c084fc"/>
+    <text x="230" y="95" fill="#8a8a99" font-size="9.5" font-family="system-ui" text-anchor="middle">ĐỒNG HỚI</text>
+    <text x="230" y="128" fill="#50506a" font-size="8" font-family="system-ui" text-anchor="middle">~490km</text>
+
+    <circle cx="420" cy="150" r="5" fill="#fbbf24"><animate attributeName="r" values="5;7;5" dur="1.6s" repeatCount="indefinite"/></circle>
+    <text x="420" y="135" fill="#fbbf24" font-size="9.5" font-family="system-ui" text-anchor="middle">ĐÀ NẴNG 🎆</text>
+    <text x="420" y="168" fill="#50506a" font-size="8" font-family="system-ui" text-anchor="middle">10-11/07 · ~300km</text>
+
+    <circle cx="610" cy="70" r="5" fill="#c084fc"/>
+    <text x="610" y="55" fill="#8a8a99" font-size="9.5" font-family="system-ui" text-anchor="middle">PLEIKU 🍜</text>
+    <text x="610" y="88" fill="#50506a" font-size="8" font-family="system-ui" text-anchor="middle">12/07 · ~440-475km</text>
+
+    <circle cx="820" cy="140" r="6" fill="#7dffaa"/>
+    <text x="820" y="165" fill="#7dffaa" font-size="9.5" font-family="system-ui" text-anchor="middle">NHA TRANG 🎯</text>
+    <text x="820" y="177" fill="#50506a" font-size="8" font-family="system-ui" text-anchor="middle">13/07 · ~322km</text>
+  </svg>
+  <div class="map-leg">
+    <div class="ml"><div class="mld" style="background:var(--a)"></div>Xuất phát — Hà Nội</div>
+    <div class="ml"><div class="mld" style="background:var(--p)"></div>Điểm dừng đêm</div>
+    <div class="ml"><div class="mld" style="background:var(--gd)"></div>Sự kiện — pháo hoa / Ngọc Lâm</div>
+    <div class="ml"><div class="mld" style="background:var(--gr)"></div>Đích — Nha Trang</div>
+  </div>
+  <div class="map-total">Tổng quãng đường ⚠️ ~1.550-1.590km/chiều · giờ lái từng chặng là <b>dải thận trọng</b>, chưa xác minh được (cao tốc mới thông 18/5/2026) → xem chi tiết trong từng mốc ngày bên dưới.</div>
+</div>
+
+<!-- ===== FLIGHTS ===== -->
+<div class="sec"><h2>✈️ Nhóm bay HAN ⇄ CXR (4 người)</h2><div class="ln"></div></div>
+<div class="fl" onclick="this.classList.toggle('on')">
+  <div class="fh">
+    <div class="fhl">
+      <div class="flogo">✈️</div>
+      <div class="fm"><h3>HAN → CXR · Chiều đi</h3><div class="s">Thảo, Bắp, bà Loan, mẹ Hường · Thứ Năm 09/07</div></div>
+    </div>
+    <div class="fhr"><span class="ftag q">Chờ mã đặt chỗ</span><span class="chv">▶</span></div>
+  </div>
+  <div class="fb"><div class="fbi">
+    <div class="dr"><span class="l">Hãng / giờ bay</span><span class="v">chưa rõ ⚠️</span></div>
+    <div class="dr"><span class="l">Trạng thái</span><span class="v">Khả năng đã đặt — chưa có mã ❓</span></div>
+    <div class="dr"><span class="l">Hành khách</span><span class="v">Thảo (mang thai ~22-24 tuần) · Bắp (~21 tháng, vé infant) · bà Loan · mẹ Hường</span></div>
+    <div class="dr"><span class="l">Xe đón sân bay</span><span class="v mono">Cam Ranh → MT Viễn Triều ~250-300k ✅</span></div>
+    <div class="dr"><span class="l">Rủi ro tần suất</span><span class="v">Vietjet từng cắt ~49% chuyến HAN-CXR ⚠️ — VNA ổn định hơn</span></div>
+  </div></div>
+</div>
+
+<div class="fl" onclick="this.classList.toggle('on')">
+  <div class="fh">
+    <div class="fhl">
+      <div class="flogo">✈️</div>
+      <div class="fm"><h3>CXR → HAN · Chiều về</h3><div class="s">Giữa/cuối tháng 8 · Nhóm 4 người</div></div>
+    </div>
+    <div class="fhr"><span class="ftag q">Chưa đặt</span><span class="chv">▶</span></div>
+  </div>
+  <div class="fb"><div class="fbi">
+    <div class="dr"><span class="l">Thai kỳ lúc bay</span><span class="v">Thảo ~28-30 tuần</span></div>
+    <div class="dr"><span class="l">Giấy bác sĩ</span><span class="v">Vietjet/Bamboo cần (27-32 tuần, hiệu lực ≤7 ngày) · VNA KHÔNG cần (&lt;32 tuần)</span></div>
+    <div class="dr"><span class="l">Khuyến nghị</span><span class="v mono">VNA — an toàn nhất chiều về ✅</span></div>
+    <div class="dr"><span class="l">Lấy giấy khám</span><span class="v">Vinmec Nha Trang, sát ngày bay</span></div>
+    <div class="dr"><span class="l">Booking</span><span class="v">❓ chưa đặt — đặt sớm trong trip, đừng để sát</span></div>
+  </div></div>
+</div>
+
+<!-- ===== EVENT — PHÁO HOA ===== -->
+<div class="sec"><h2>🎆 Sự kiện — Pháo hoa DIFF</h2><div class="ln"></div></div>
+<div class="banner" style="background:linear-gradient(135deg,rgba(251,191,36,0.08),rgba(255,122,89,0.05),rgba(90,209,255,0.04));border:1px solid rgba(251,191,36,0.22)">
+  <div class="banner-top">
+    <div class="banner-logo" style="font-size:20px">🎆</div>
+    <div class="banner-title">DIFF <span style="color:var(--gd)">Chung kết 2026</span></div>
+  </div>
+  <div class="bsub">Bờ sông Hàn, Đà Nẵng · 20:10, Thứ Bảy 11/07/2026 ✅</div>
+  <div class="bgrid">
+    <div class="bd"><div class="bi" style="background:var(--gdg)">📍</div><div><strong>Bờ sông Hàn</strong>Đà Nẵng</div></div>
+    <div class="bd"><div class="bi" style="background:var(--ag)">🕐</div><div><strong>20:10, Thứ Bảy 11/07</strong>Chung kết DIFF</div></div>
+    <div class="bd"><div class="bi" style="background:var(--og)">🎯</div><div><strong>Mong muốn, không ép</strong>Fallback nếu kẹt/cháy vé</div></div>
+    <div class="bd"><div class="bi" style="background:var(--pg)">🚗</div><div><strong>Nghỉ đêm Đà Nẵng</strong>2 đêm (10-11/07)</div></div>
+  </div>
+  <div class="bnote">Kẹt xe/cháy vé khán đài → xem từ <b>bờ Đông sông Hàn (miễn phí)</b>, đừng ép cả đoàn chen chúc. Về khuya có thể kẹt xe tan pháo hoa — cần ngủ đủ trước chặng đèo Tây Nguyên ngày mai (nặng nhất).</div>
+</div>
+
+<!-- ===== EVENT — BOOTCAMP ===== -->
+<div class="sec"><h2>🎯 Sự kiện — Bootcamp</h2><div class="ln"></div></div>
+<div class="banner" style="background:linear-gradient(135deg,rgba(90,209,255,0.07),rgba(192,132,252,0.05),rgba(251,191,36,0.04));border:1px solid rgba(90,209,255,0.2)">
+  <div class="banner-top">
+    <div class="banner-logo" style="font-size:20px">🎯</div>
+    <div class="banner-title">Bootcamp Nha Trang 2026 <span style="color:var(--a)">Team OS × AI</span></div>
+  </div>
+  <div class="bsub">The Empyrean Cam Ranh 5★, Bãi Dài · 21-24/07 (+25 tuỳ chọn) ✅</div>
+  <div class="bgrid">
+    <div class="bd"><div class="bi" style="background:var(--ag)">📍</div><div><strong>The Empyrean Cam Ranh 5★</strong>Bãi Dài, ~42-50km nam Nha Trang</div></div>
+    <div class="bd"><div class="bi" style="background:var(--pg)">🗓️</div><div><strong>21-24/07 (+25 tuỳ chọn)</strong>4 ngày 3 đêm + tour speedboat</div></div>
+    <div class="bd"><div class="bi" style="background:var(--gdg)">💰</div><div><strong>12tr member / 15tr ngoài</strong>Trước 10/07 — sau: 15tr/18tr</div></div>
+    <div class="bd"><div class="bi" style="background:var(--grg)">👥</div><div><strong>5 nam tham gia</strong>Gia đình ở lại MT Viễn Triều</div></div>
+  </div>
+  <div class="bnote">Đã gồm 3 đêm 5★ (2 khách/phòng); phòng riêng +3,2tr; nhóm 3+ giảm 10%. <b>KHÔNG gồm</b> đưa đón NT ⇄ Bãi Dài — cần đặt riêng. <span class="tag w">Trước 10/07</span> để giữ giá early bird.</div>
+</div>
+
+<!-- ===== HOTEL ===== -->
+<div class="sec"><h2>🏨 Chỗ ở</h2><div class="ln"></div></div>
+<div class="hotel">
+  <div class="hotel-icon">🏨</div>
+  <div class="hotel-info">
+    <h4>Mường Thanh Viễn Triều</h4>
+    <p>03 Phạm Văn Đồng, P. Vĩnh Phước · 09/07 → 15/08 (~37 ngày, ⭐ đề xuất 2-3 căn)</p>
+  </div>
+  <div class="hotel-tag w">⚠️ Đang đặt</div>
+</div>
+<div class="backup-list">
+  <div class="bl-h">Backup nếu MT Viễn Triều hết căn / giá vượt ngân sách</div>
+  <div class="bl-row"><div class="l">HUD Building<small>04 Nguyễn Thiện Thuật, Vĩnh Phước · cách biển ~300m</small></div><div class="v">⚠️ 3PN ~18-30tr/tháng</div></div>
+  <div class="bl-row"><div class="l">Gold Coast<small>1 Trần Hưng Đạo, Lộc Thọ · trung tâm, xa khu Vĩnh Phước hơn</small></div><div class="v">⚠️ 2PN ~17-35tr/tháng, 3PN chưa có giá</div></div>
+</div>
+
+<!-- ===== NHÀ TRẺ ===== -->
+<div class="sec"><h2>🧒 Nhà trẻ cho Bắp (~21 tháng, ~5 tuần)</h2><div class="ln"></div></div>
+<div class="hotel">
+  <div class="hotel-icon">🧒</div>
+  <div class="hotel-info">
+    <h4>Lavie Kids ⭐#1</h4>
+    <p>62/3 Nguyễn Khuyến, Vĩnh Hải · ~1-1.5km từ chỗ ở · học phí 2-3tr/tháng ⚠️</p>
+  </div>
+  <div class="hotel-tag w">⚠️ Gọi xác nhận</div>
+</div>
+<div class="backup-list">
+  <div class="bl-h">"Sakura" KHÔNG có ở Nha Trang ✅ (chỉ HN + TP.HCM) — backup nếu Lavie Kids không nhận ngắn hạn</div>
+  <div class="bl-row"><div class="l">MN Vĩnh Hải (công)<small>Nguyễn Quyền, Vĩnh Hải · ⚠️ ưu tiên hộ khẩu</small></div><div class="v">0583 833 993</div></div>
+  <div class="bl-row"><div class="l">MN Vĩnh Phước (công)<small>Khóm Biển Trên, Vĩnh Phước · cùng phường</small></div><div class="v">⚠️ chưa có SĐT</div></div>
+  <div class="bl-row"><div class="l">NT Montessori Preschool<small>31 Tô Hiến Thành, Tân Lập · song ngữ, xa hơn</small></div><div class="v">02583 881 825</div></div>
+  <div class="bl-row"><div class="l">Maple Bear / VCN World<small>KĐT VCN Phước Long · cao cấp, xa nhất</small></div><div class="v">0258.628.8889</div></div>
+</div>
+
+<!-- ===== DAY-BY-DAY ===== -->
+<div class="sec"><h2>📅 Các mốc chính</h2><div class="ln"></div></div>
+<div class="dsel" id="dsel">
+  <div class="db on" data-d="0"><div class="dd">Ngày 1</div><div class="dn">09/07</div><div class="dt">Khởi hành</div></div>
+  <div class="db ev" data-d="1"><div class="dd">Ngày 3</div><div class="dn">11/07</div><div class="dt">Pháo hoa</div></div>
+  <div class="db" data-d="2"><div class="dd">Ngày 4</div><div class="dn">12/07</div><div class="dt">Pleiku</div></div>
+  <div class="db" data-d="3"><div class="dd">Ngày 5</div><div class="dn">13/07</div><div class="dt">Về NT</div></div>
+  <div class="db" data-d="4"><div class="dd">Nhịp tuần</div><div class="dn">Hàng tuần</div><div class="dt">Workcation</div></div>
+  <div class="db ev" data-d="5"><div class="dd">21-24/07</div><div class="dn">Bootcamp</div><div class="dt">Empyrean</div></div>
+  <div class="db crit" data-d="6"><div class="dd">Mốc cứng</div><div class="dn">15/08</div><div class="dt">Có mặt NT</div></div>
+</div>
+<div class="dc" id="dc"></div>
+
+<!-- ===== FOOD (ƯU TIÊN #1) ===== -->
+<div class="sec"><h2>🍜 Food Experiences — Ưu tiên #1 của thầy</h2><div class="ln"></div></div>
+<div class="food-lede">Bà bầu (Thảo): ưu tiên món <b>CHÍN</b>, tránh gỏi/hải sản sống/tái. Note bên dưới đã đối chiếu từng nơi.</div>
+<div class="food-grid">
+  <div class="food-card">
+    <h4>Chợ / Cảng cá Vĩnh Lương</h4>
+    <div class="addr">P. Vĩnh Lương · từ ~5:00 sáng</div>
+    <div class="dish">Tự chọn hải sản đang bơi (<b>cá hố, mực, ghẹ, tôm tít</b>) → nhờ quán chế biến tại chỗ</div>
+    <div class="preg">⚠️ Yêu cầu nấu chín kỹ — tránh gỏi/tái/sống</div>
+  </div>
+  <div class="food-card">
+    <h4>Bún sứa / bún cá Cô Ba</h4>
+    <div class="addr">CS1: 105 Hoàng Hoa Thám · CS2: 123 Yersin · 06-11 &amp; 16-20:30</div>
+    <div class="dish"><b>Bún sứa chả cá</b></div>
+    <div class="preg">✅ Sứa + chả cá đều chín</div>
+  </div>
+  <div class="food-card">
+    <h4>Nem nướng Đặng Văn Quyên</h4>
+    <div class="addr">16A Lãn Ông hoặc 2-4 Phan Bội Châu · 10-22 · gốc Ninh Hòa, 30 năm</div>
+    <div class="dish"><b>Nem nướng cuốn bánh tráng</b></div>
+    <div class="preg">✅ Nướng than · rau sống rửa kỹ</div>
+  </div>
+  <div class="food-card">
+    <h4>Bánh căn Cô Trang</h4>
+    <div class="addr">3A Tháp Bà, Vĩnh Thọ · 19-22 · gần khu ở nhất</div>
+    <div class="dish"><b>Bánh căn tôm / mực / trứng cút</b></div>
+    <div class="preg">✅ Nướng chín khuôn đất</div>
+  </div>
+  <div class="food-card">
+    <h4>Bè nổi Mười Phùng</h4>
+    <div class="addr">Làng Chài, Hòn Miễu · cách bến tàu 1km (~6km từ trung tâm) · 07:30-17</div>
+    <div class="dish"><b>Mực xào, lẩu chua cá, cá chiên sốt cà</b></div>
+    <div class="preg">⚠️ Tránh gỏi/hàu sống — chọn món xào/chiên/lẩu · đặt bàn 0849 256 256</div>
+  </div>
+</div>
+<div class="food-mini">
+  <div class="fm-row"><div class="l"><b>Bò Nướng Lạc Cảnh</b> — 77 Nguyễn Bỉnh Khiêm, 40 năm</div><div class="v">95-150k/đĩa ✅ · 9:30-21</div></div>
+  <div class="fm-row"><div class="l"><b>Bún Cá Nguyên Loan</b> — 123 Ngô Gia Tự, 42 năm</div><div class="v">~45k/tô · 5:30-22:30</div></div>
+  <div class="fm-row"><div class="l"><b>Hải sản Thanh Sương</b> — 15 &amp; 9A Trần Phú, Vĩnh Nguyên</div><div class="v">⚠️ dặn nấu chín · 10-22:30</div></div>
+  <div class="fm-row"><div class="l"><b>Chợ đi hàng ngày</b> — Chợ Xóm Mới (&gt;1.000 gian, hải sản tươi, rẻ nhất, ra sớm)</div><div class="v">Chợ Đầm = đồ khô/quà</div></div>
+  <div class="fm-row"><div class="l"><b>Siêu thị</b> — Co.opmart (02 Lê Hồng Phong, giao free &lt;5km) · WinMart (60 Thái Nguyên / Trần Phú)</div><div class="v">đồ khô, sữa bầu-bé</div></div>
+</div>
+
+<!-- ===== BUDGET ===== -->
+<div class="sec"><h2>💰 Ngân sách — tiết kiệm</h2><div class="ln"></div></div>
+<div class="price">
+  <h3>🏠 Sinh hoạt / tháng</h3>
+  <div class="ph-note">Ngân sách tiết kiệm · các dòng ⚠️ là ước tính, chưa chốt</div>
+  <div class="pr"><span class="l">🏠 Thuê nhà (2-3 căn)<small>từ ~11tr/căn khởi điểm — giá peak T7 ⚠️ chưa verify</small></span><span class="v">~22-35tr</span></div>
+  <div class="pr"><span class="l">🍽️ Ăn uống (9 người)<small>⚠️ ước suy luận — chốt lại sau 3-4 ngày đi chợ thật</small></span><span class="v">~25-34tr</span></div>
+  <div class="pr"><span class="l">🧒 Nhà trẻ Bắp (~5 tuần)<small>Lavie Kids ⚠️ chưa xác nhận</small></span><span class="v">~2-3tr</span></div>
+  <div class="pr"><span class="l">🩺 Dự phòng (y tế, phát sinh)</span><span class="v">~5tr</span></div>
+  <div class="pr total"><span class="l">Tổng sinh hoạt/tháng<small>chưa gồm xăng/vé bay/bootcamp bên dưới</small></span><span class="v">~54-77tr</span></div>
+</div>
+<div class="price">
+  <h3>🚗 Chi phí một lần</h3>
+  <div class="pr"><span class="l">⛽ Ô tô — xăng + phí BOT (1 chiều)<small>~3,0tr xăng ✅ + ~1,5-2tr phí ⚠️ · trên ~1.550-1.590km/chiều</small></span><span class="v">~4,5-5tr</span></div>
+  <div class="pr"><span class="l">⛽ Ô tô khứ hồi<small>nếu về bằng ô tô</small></span><span class="v">~9-11tr</span></div>
+  <div class="pr"><span class="l">✈️ Vé bay 4 người (1 chiều)<small>~1,5-1,7tr/người lớn ×3 + Bắp vé infant ⚠️</small></span><span class="v">~5-6tr</span></div>
+  <div class="pr"><span class="l">🚕 Xe Cam Ranh → Nha Trang<small>xe riêng 7 chỗ, đặt trước 6-12h</small></span><span class="v">~250-300k/chuyến</span></div>
+  <div class="pr"><span class="l">🎯 Bootcamp Empyrean (mỗi nam)<small>member/ngoài, trước 10/07 → 15tr/18tr sau; nhóm 3+ -10%</small></span><span class="v">12tr / 15tr</span></div>
+</div>
+
+<!-- ===== CHECKLIST ===== -->
+<div class="sec"><h2>☑️ Booking Checklist</h2><div class="ln"></div></div>
+<div class="todo" id="t1">
+  <h3>🔴 Trước 09/07 (còn ≤6 ngày)</h3><div class="tbar"><div class="tfill" style="width:0%"></div></div><div class="tct">0/7</div>
+  <div class="ti" onclick="tg(this)"><div class="tc">✓</div><div class="tt">Gọi Mường Thanh Viễn Triều: chốt số căn + giá peak T7 + wifi Mbps + thang máy + giá điện/nước — gọi song song HUD Building + Gold Coast</div></div>
+  <div class="ti" onclick="tg(this)"><div class="tc">✓</div><div class="tt">❓ Thầy gửi mã vé bay chiều đi (hãng + giờ) để điền plan + kiểm quy định bà bầu đúng hãng</div></div>
+  <div class="ti" onclick="tg(this)"><div class="tc">✓</div><div class="tt">Gọi Lavie Kids xác nhận nhận ngắn hạn ~5 tuần + giấy tờ trẻ vãng lai</div></div>
+  <div class="ti" onclick="tg(this)"><div class="tc">✓</div><div class="tt">Đặt phòng nghỉ đêm dọc đường: Đồng Hới (09/07) + Đà Nẵng (10&amp;11/07, 2 đêm) + Pleiku (12/07) — chọn KS có bãi đỗ ô tô</div></div>
+  <div class="ti" onclick="tg(this)"><div class="tc">✓</div><div class="tt">Đặt bàn nhà hàng Ngọc Lâm Pleiku — mặc định tối 12/07 ~19:00-19:30 (báo anh Đỗ Trọng Luận); fallback dời trưa 13/07 nếu cần</div></div>
+  <div class="ti" onclick="tg(this)"><div class="tc">✓</div><div class="tt">Kiểm tra/bảo dưỡng xe (dầu, lốp, phanh) + nạp ePass/VETC</div></div>
+  <div class="ti" onclick="tg(this)"><div class="tc">✓</div><div class="tt">Theo dõi dự báo bão 1-2 ngày trước khởi hành</div></div>
+</div>
+
+<div class="todo" id="t2">
+  <h3>⏰ Trước 10/07 — early bird bootcamp</h3><div class="tbar"><div class="tfill" style="width:0%"></div></div><div class="tct">0/1</div>
+  <div class="ti" onclick="tg(this)"><div class="tc">✓</div><div class="tt">❓ Rà ai trong 5 nam CHƯA mua vé bootcamp — mua trước hết 10/07 (12tr member vs 15tr sau; nhóm 3+ giảm 10%)</div></div>
+</div>
+
+<div class="todo" id="t3">
+  <h3>🔵 Trong trip — đặt sớm, đừng để sát</h3><div class="tbar"><div class="tfill" style="width:0%"></div></div><div class="tct">0/3</div>
+  <div class="ti" onclick="tg(this)"><div class="tc">✓</div><div class="tt">Vé bay CHIỀU VỀ cả nhóm 4 (giữa/cuối 8) — Thảo lúc đó ~28-30 tuần: mọi hãng cần giấy bác sĩ trừ VNA (&lt;32 tuần không cần) → VNA an toàn nhất; lấy giấy khám ở Vinmec sát ngày bay</div></div>
+  <div class="ti" onclick="tg(this)"><div class="tc">✓</div><div class="tt">❓ Chốt ai lái ô tô về (hay xe gửi về / thuê tài)</div></div>
+  <div class="ti" onclick="tg(this)"><div class="tc">✓</div><div class="tt">❓ Chốt ngày kết thúc thuê nhà quanh/sau 15/08</div></div>
+</div>
+
+<!-- ===== CẢNH BÁO ===== -->
+<div class="sec"><h2>⚠️ Cảnh báo</h2><div class="ln"></div></div>
+<div class="warn-card crit">
+  <h4>🌀 Bão</h4>
+  <p>"Bão số 1"/Maysak đang hình thành đúng tuần này (hướng Vịnh Bắc Bộ/Quảng Ninh-Hải Phòng, không trực tiếp miền Trung) — nhưng tháng 7 là cao điểm mùa bão, mưa cao hơn TBNN 5-10%. Theo dõi lại dự báo 1-2 ngày trước 09/07. Chiều về tháng 8: mùa mưa bão miền Trung — canh lịch tránh ngày bão.</p>
+</div>
+<div class="warn-card">
+  <h4>🛗 Thang máy giờ cao điểm — MT Viễn Triều</h4>
+  <p>Mật độ 25-28 căn/tầng → chờ thang máy giờ cao điểm (quan trọng vì bà bầu + bé). Hỏi khi gọi: giờ nào đông, có thang riêng cho khu căn hộ dài hạn không.</p>
+</div>
+<div class="warn-card crit">
+  <h4>📋 Giấy bác sĩ chiều về</h4>
+  <p>Thảo lúc bay về ~28-30 tuần: Vietjet/Bamboo cần giấy hiệu lực ≤7 ngày (27-32 tuần); VNA &lt;32 tuần KHÔNG cần → khuyến nghị VNA an toàn nhất. Lấy giấy khám ở Vinmec Nha Trang sát ngày bay.</p>
+</div>
+<div class="warn-card">
+  <h4>✈️ Tần suất bay HAN-CXR</h4>
+  <p>Vietjet từng cắt ~49% chuyến route này (từ 01/04), đang phục hồi nhưng chưa có số chuyến/ngày xác nhận cho tháng 7 → rủi ro đổi giờ/thiếu ghế. VNA ổn định hơn. Chốt vé live trên app hãng, đừng suy luận giá.</p>
+</div>
+<div class="warn-card">
+  <h4>🌤️ Thời tiết Nha Trang tháng 7</h4>
+  <p>Nắng gắt ban ngày (27-35°C), mưa rào bất chợt chiều/tối. Tắm biển hợp lý 6-9h sáng hoặc 16-18h chiều, tránh 10-15h (đặc biệt bà bầu + bé). Biển êm, thuận tour đảo.</p>
+</div>
+
+<!-- ===== FOOTER ===== -->
+<div class="footer"><span>TravelWings</span> · Nha Trang Workcation 2026 · Xem thêm <a href="travelwings-nhat-ban.html">trip Nhật Bản →</a></div>
+
+</div>
+
+<script>
+// Day-by-day data — các mốc chính (không phải 38 ngày đầy đủ)
+const days=[
+  {t:"Thứ Năm, 09/07",s:"Ngày 1 — Khởi hành",i:[
+    {t:"",d:"🚗 Nhóm ô tô (5 nam: thầy Đức, Khải, Thiên Sơn, Duy, Hưng edit) xuất phát Hà Nội sáng sớm → cao tốc → nghỉ đêm <strong>Đồng Hới</strong> (~490km ✅, ~6-8h lái ⚠️ chưa xác minh)"},
+    {t:"",d:"✈️ Nhóm bay (Thảo, Bắp, bà Loan, mẹ Hường) bay <strong>HAN → CXR</strong> — ❓ vé khả năng đã đặt, CHƯA có mã/hãng/giờ"},
+    {t:"",d:"🚕 Xe Cam Ranh → <strong>Mường Thanh Viễn Triều</strong> (~250-300k/chuyến ✅, đặt trước 6-12h)"}
+  ],n:"21 trạm dừng nghỉ dọc tuyến cao tốc; chú ý bắn tốc độ đổi liên tục 80-120km/h giữa các đoạn (dễ bị phạt nguội qua nút giao/cầu/hầm)."},
+  {t:"Thứ Bảy, 11/07",s:"Ngày 3 — Pháo hoa DIFF Đà Nẵng 🎆",i:[
+    {t:"10/07",d:"Ô tô: Đồng Hới → <strong>Đà Nẵng</strong> (~300km ✅, ~4-6h ⚠️), nghỉ đêm ĐN. ⏰ <strong>Early bird bootcamp hết hạn hôm nay</strong>!"},
+    {t:"",d:"Cả ngày 11/07: nghỉ ngơi tại Đà Nẵng — đệm sức khoẻ trước chặng đèo Tây Nguyên nặng nhất"},
+    {t:"20:10",d:"🎆 <strong>Pháo hoa quốc tế DIFF — chung kết</strong>, bờ sông Hàn ✅ — mong muốn, KHÔNG ép; kẹt xe/cháy vé → xem bờ Đông sông Hàn (miễn phí)"},
+    {t:"",d:"Nghỉ đêm Đà Nẵng (đêm 2)"}
+  ],n:"Về khuya có thể kẹt xe tan pháo hoa → cả đoàn cần ngủ đủ giấc + lái luân phiên (5 nam) trước chặng đèo An Khê/Mang Yang ngày mai (nặng nhất, ~9-10h)."},
+  {t:"Chủ Nhật, 12/07",s:"Ngày 4 — Đà Nẵng → Pleiku 🍜",i:[
+    {t:"≤07:00",d:"Xuất phát Đà Nẵng — bắt buộc sớm để kịp giờ ăn tối"},
+    {t:"",d:"Qua Quy Nhơn/Bình Định → An Khê → <strong>Pleiku</strong> (QL19, ~440-475km ⚠️, ~9-10h ⚠️ — đèo An Khê/Mang Yang)"},
+    {t:"19:00",d:"🍜 Ăn tối <strong>nhà hàng Ngọc Lâm</strong> (gia đình anh Đỗ Trọng Luận) ~19:00-19:30 — đã báo trước"},
+    {t:"",d:"Nghỉ đêm Pleiku"}
+  ],n:"⚠️ FALLBACK nếu rời ĐN sau 09:00 hoặc đoàn mệt: ngủ đêm Quy Nhơn (~300km), dời Ngọc Lâm sang ĂN TRƯA 13/07 (báo anh Luận trước ≥1 ngày), về Nha Trang tối 13/07 — vẫn dư ~6 ngày trước bootcamp 21/07."},
+  {t:"Thứ Hai, 13/07",s:"Ngày 5 — Pleiku → Nha Trang 🎯",i:[
+    {t:"",d:"Pleiku → <strong>QL25 → Tuy Hoà → Nha Trang</strong> (~322km ✅, ~5,5-6h ✅ — nhanh hơn QL26 qua Buôn Ma Thuột)"},
+    {t:"",d:"🎯 Đoàn ô tô hợp nhất với nhóm bay tại Mường Thanh Viễn Triều"}
+  ],n:"QL25 qua Tuy Hoà đã verify nhanh hơn QL26 qua BMT (~313km nhưng ~7h24 vì đèo Phượng Hoàng xấu hơn) → chốt QL25."},
+  {t:"14/07 → 20/07 &amp; 25/07 → 14/08",s:"Nhịp workcation hàng tuần",i:[
+    {t:"08:30",d:"Họp Team hàng ngày (5 nam + thầy)"},
+    {t:"",d:"10X Masterclass / coaching online — chỗ ở phải wifi mạnh"},
+    {t:"",d:"🧘 3 khung thiền bất khả xâm phạm: <strong>04:00-05:00 · 12:00-13:00 · 19:50-21:00</strong>"},
+    {t:"",d:"🍜 Ăn uống trải nghiệm (ưu tiên #1) + đi chợ Xóm Mới hằng ngày"},
+    {t:"",d:"Khám thai Thảo định kỳ (Vinmec Nha Trang) + gửi Bắp nhà trẻ Lavie Kids"}
+  ],n:"Chỗ ở PHẢI wifi mạnh (hỏi Mbps khi chốt căn) + không gian quay + giữ yên đúng 3 khung thiền."},
+  {t:"21-24/07 (+25 tuỳ chọn)",s:"Bootcamp Nha Trang 2026 · Team OS × AI 🎯",i:[
+    {t:"",d:"5 nam ra <strong>The Empyrean Cam Ranh 5★</strong>, Bãi Dài (~42-50km ✅, ~45ph-1h xe)"},
+    {t:"",d:"Gia đình ở lại Mường Thanh Viễn Triều — có bà Loan + mẹ Hường trông Bắp + lo Thảo"},
+    {t:"+25/07",d:"Tour speedboat tuỳ chọn"},
+    {t:"",d:"❓ Chốt \"người trực khẩn cấp\" trong 5 nam — có thể tách về NT trong ~1h nếu cần"}
+  ],n:"Lưu sẵn SĐT taxi/xe 7 chỗ NT ⇄ Bãi Dài + Vinmec + BS sản TRƯỚC khi vào bootcamp."},
+  {t:"Thứ Bảy, 15/08",s:"🔴 Mốc cứng",i:[
+    {t:"",d:"🔴 Thầy PHẢI có mặt tại Nha Trang — lý do ❓ chưa rõ"},
+    {t:"",d:"❓ Chốt ngày kết thúc thuê nhà quanh/sau 15/08"},
+    {t:"",d:"Chiều về: vé bay chưa đặt ❓ · ai lái ô tô về ❓"}
+  ],n:"Hạn thuê Mường Thanh Viễn Triều tối thiểu tới 15/08 (~37 ngày kể từ 09/07)."}
+];
+
+// Render day
+function rd(i){
+  const d=days[i],c=document.getElementById('dc');
+  let h='<div class="dct">'+d.t+'</div><div class="dcs">'+d.s+'</div>';
+  d.i.forEach(it=>{
+    h+='<div class="dci">'+(it.t?'<span class="dctm">'+it.t+'</span>':'<span class="dctm" style="opacity:.3">•</span>')+'<span class="dctx">'+it.d+'</span></div>';
+  });
+  if(d.n) h+='<div class="dcn">'+d.n+'</div>';
+  c.innerHTML=h;
+}
+document.querySelectorAll('.db').forEach(b=>{
+  b.addEventListener('click',()=>{
+    document.querySelectorAll('.db').forEach(x=>x.classList.remove('on'));
+    b.classList.add('on');
+    rd(+b.dataset.d);
+  });
+});
+rd(0);
+
+// Checklists with localStorage
+const SK='tw-nha-trang';
+function ld(){try{return JSON.parse(localStorage.getItem(SK))||{}}catch{return{}}}
+function sv(s){localStorage.setItem(SK,JSON.stringify(s))}
+function gid(e){return e.querySelector('.tt').textContent.trim().slice(0,40)}
+function up(c){const a=c.querySelectorAll('.ti'),d=c.querySelectorAll('.ti.done').length,t=a.length,p=t?Math.round(d/t*100):0;c.querySelector('.tfill').style.width=p+'%';c.querySelector('.tct').textContent=d+'/'+t}
+function tg(e){e.classList.toggle('done');up(e.closest('.todo'));const s=ld();s[gid(e)]=e.classList.contains('done');sv(s)}
+(function(){const s=ld();document.querySelectorAll('.ti').forEach(e=>{if(s[gid(e)])e.classList.add('done')});document.querySelectorAll('.todo').forEach(up)})();
+
+// Theme toggle
+(function(){
+  const TK=SK+'-theme',b=document.body,btn=document.getElementById('themeToggle');
+  const saved=localStorage.getItem(TK);
+  if(saved==='light') b.classList.add('light');
+  function upBtn(){btn.textContent=b.classList.contains('light')?'🌙':'☀️'}
+  upBtn();
+  btn.addEventListener('click',()=>{
+    b.classList.toggle('light');
+    localStorage.setItem(TK,b.classList.contains('light')?'light':'dark');
+    upBtn();
+  });
+})();
+</script>
+</body>
+</html>
