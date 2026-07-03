@@ -1,0 +1,581 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="robots" content="noindex, nofollow">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>TravelWings — Nhật Bản · Kanto 10 Ngày</title>
+<!-- Zero external requests: system font stack (offline + máy bay an toàn) -->
+<style>
+:root{--bg:#06060a;--s:rgba(255,255,255,0.03);--g:rgba(255,255,255,0.05);--g2:rgba(255,255,255,0.07);--b:rgba(255,255,255,0.07);--b2:rgba(255,255,255,0.12);--a:#5ad1ff;--ag:rgba(90,209,255,0.12);--o:#ff7a59;--og:rgba(255,122,89,0.12);--gr:#7dffaa;--grg:rgba(125,255,170,0.1);--p:#c084fc;--pg:rgba(192,132,252,0.1);--gd:#fbbf24;--gdg:rgba(251,191,36,0.12);--red:#ff3b5c;--redg:rgba(255,59,92,0.14);--t:#f0f0f5;--m:#8a8a99;--d:#50506a;--r:16px;--sm:10px}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,'Helvetica Neue',Arial,sans-serif;background:var(--bg);color:var(--t);line-height:1.55;overflow-x:hidden}
+a{color:var(--a);text-decoration:none;transition:opacity .2s}a:hover{opacity:.8;text-decoration:underline}
+
+/* Ambient orbs */
+.orb{position:fixed;border-radius:50%;filter:blur(140px);opacity:.22;pointer-events:none;z-index:0}
+.o1{width:700px;height:700px;background:radial-gradient(circle,rgba(90,209,255,.18),transparent 70%);top:-250px;right:-150px}
+.o2{width:550px;height:550px;background:radial-gradient(circle,rgba(255,122,89,.14),transparent 70%);bottom:-200px;left:-100px}
+.o3{width:400px;height:400px;background:radial-gradient(circle,rgba(251,191,36,.1),transparent 70%);top:40%;left:50%;transform:translateX(-50%)}
+
+.w{max-width:900px;margin:0 auto;padding:40px 20px 80px;position:relative;z-index:1}
+
+/* Theme toggle */
+.theme-btn{position:fixed;top:16px;right:16px;z-index:100;width:36px;height:36px;border-radius:50%;border:1px solid var(--b);background:var(--g);cursor:pointer;font-size:16px;display:flex;align-items:center;justify-content:center;backdrop-filter:blur(20px);transition:all .2s}
+.theme-btn:hover{background:var(--g2);border-color:var(--b2);transform:scale(1.1)}
+
+/* Hero */
+.hero{position:relative;border-radius:var(--r);overflow:hidden;margin-bottom:20px;min-height:260px;display:flex;align-items:flex-end;background:linear-gradient(135deg,#1a0a2e,#0a1628,#06060a)}
+.hero::before{content:'';position:absolute;inset:0;background:linear-gradient(0deg,rgba(6,6,10,0.9) 0%,rgba(6,6,10,0.3) 50%,transparent 100%)}
+.hero-c{position:relative;z-index:2;padding:32px;width:100%}
+.badge{display:inline-flex;align-items:center;gap:6px;background:rgba(255,255,255,0.08);border:1px solid rgba(255,255,255,0.15);border-radius:999px;padding:6px 16px;font-size:11px;font-weight:600;color:var(--a);text-transform:uppercase;letter-spacing:2px;margin-bottom:14px;backdrop-filter:blur(20px)}
+.hero h1{font-size:clamp(30px,6vw,48px);font-weight:900;letter-spacing:-2px;line-height:1.05;margin-bottom:6px;color:#fff}
+.hero .sub{font-size:14px;color:rgba(255,255,255,0.6);margin-bottom:3px}
+.hero .sub2{font-size:11px;color:rgba(255,255,255,0.4)}
+
+/* Animated plane */
+.plane-wrap{position:absolute;inset:0;z-index:1;pointer-events:none;overflow:hidden}
+.contrail{fill:none;stroke:url(#trailGrad);stroke-width:2;stroke-dasharray:400;stroke-dashoffset:400;animation:drawTrail 8s ease-in-out infinite}
+@keyframes drawTrail{0%{stroke-dashoffset:400}50%{stroke-dashoffset:0}100%{stroke-dashoffset:-400}}
+
+/* Stats */
+.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin-bottom:20px}
+.st{background:var(--g);border:1px solid var(--b);border-radius:var(--sm);padding:14px;text-align:center;transition:all .25s;backdrop-filter:blur(12px);box-shadow:0 4px 24px rgba(0,0,0,0.2),inset 0 1px 0 rgba(255,255,255,0.04)}
+.st:hover{background:var(--g2);transform:translateY(-2px)}
+.stv{font-size:22px;font-weight:900;letter-spacing:-1px}
+.stv.b{color:var(--a)}.stv.o{color:var(--o)}.stv.g{color:var(--gr)}.stv.p{color:var(--p)}.stv.gd{color:var(--gd)}.stv.r{color:var(--red)}
+.stl{font-size:8.5px;text-transform:uppercase;letter-spacing:1px;color:var(--d);font-weight:600;margin-top:2px}
+
+/* Section headers */
+.sec{display:flex;align-items:center;gap:10px;margin:28px 0 12px}
+.sec h2{font-size:16px;font-weight:800;letter-spacing:-0.3px;white-space:nowrap}
+.sec .ln{flex:1;height:1px;background:linear-gradient(90deg,var(--b),transparent)}
+.cap{font-size:10px;color:var(--d);margin:-6px 0 14px}
+
+/* Event / banner */
+.banner{border-radius:var(--r);padding:24px;margin-bottom:22px;position:relative;overflow:hidden;backdrop-filter:blur(20px);box-shadow:0 4px 24px rgba(0,0,0,0.2),inset 0 1px 0 rgba(255,255,255,0.04)}
+.banner::after{content:'';position:absolute;top:0;left:-200%;width:200%;height:100%;background:linear-gradient(90deg,transparent,rgba(255,255,255,0.02),transparent);animation:shimmer 6s ease-in-out infinite}
+@keyframes shimmer{0%{left:-200%}100%{left:200%}}
+.banner-top{display:flex;align-items:center;gap:12px;margin-bottom:4px;position:relative}
+.banner-logo{width:34px;height:34px;border-radius:8px;object-fit:contain;background:rgba(255,255,255,0.06);padding:3px;display:flex;align-items:center;justify-content:center;font-size:17px;flex-shrink:0}
+.banner-title{font-size:21px;font-weight:800;letter-spacing:-0.4px}
+.banner-title span{text-shadow:0 0 20px currentColor}
+.bgrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:10px;position:relative;margin-top:14px}
+.bd{display:flex;align-items:flex-start;gap:8px;font-size:12px;color:var(--m)}
+.bd .bi{width:28px;height:28px;border-radius:7px;display:flex;align-items:center;justify-content:center;font-size:13px;flex-shrink:0}
+.bd strong{color:var(--t);display:block;font-size:12px}
+
+/* Visa critical banner extras */
+.visa-icon{animation:pulseIcon 2s ease-in-out infinite}
+@keyframes pulseIcon{0%,100%{transform:scale(1)}50%{transform:scale(1.15)}}
+.countdown{margin-top:14px;padding:11px 14px;background:rgba(255,59,92,0.1);border:1px solid rgba(255,59,92,0.28);border-radius:10px;font-size:12px;font-weight:700;color:var(--red);position:relative}
+.miles{display:flex;flex-wrap:wrap;gap:6px;align-items:center;margin-top:14px;position:relative}
+.mchip{background:rgba(255,255,255,0.05);border:1px solid var(--b);border-radius:8px;padding:6px 10px;font-size:9.5px;color:var(--m);white-space:nowrap}
+.mchip strong{color:var(--t);display:block;font-size:11px;font-weight:700}
+.marrow{color:var(--d);font-size:12px}
+
+/* Verify tags */
+.tag{font-size:8px;font-weight:700;padding:2px 6px;border-radius:999px;margin-left:6px;text-transform:uppercase;letter-spacing:.4px;white-space:nowrap;display:inline-block}
+.tag.u{color:var(--o);background:var(--og)}.tag.p{color:var(--a);background:var(--ag)}
+.tag.ok{color:var(--gr);background:var(--grg)}.tag.warn{color:var(--o);background:var(--og)}
+.tag.ask{color:var(--p);background:var(--pg)}.tag.crit{color:var(--red);background:var(--redg)}
+
+/* Flight cards */
+.fl{background:var(--g);border:1px solid var(--b);border-radius:var(--r);margin-bottom:8px;overflow:hidden;transition:all .25s;cursor:pointer;backdrop-filter:blur(12px);box-shadow:0 4px 24px rgba(0,0,0,0.2),inset 0 1px 0 rgba(255,255,255,0.04)}
+.fl:hover{background:var(--g2);border-color:var(--b2);transform:translateY(-1px)}
+.fl.on .fb{max-height:460px;opacity:1;padding:0 16px 14px}
+.fh{display:flex;align-items:center;justify-content:space-between;padding:13px 16px}
+.fhl{display:flex;align-items:center;gap:10px}
+.flogo{width:26px;height:26px;border-radius:6px;display:flex;align-items:center;justify-content:center;font-size:13px;background:rgba(255,255,255,0.06)}
+.fm h3{font-size:12px;font-weight:700}.fm .s{font-size:10px;color:var(--m)}
+.fhr{display:flex;align-items:center;gap:8px}
+.ftag{font-size:9px;font-weight:700;text-transform:uppercase;letter-spacing:.7px;padding:3px 8px;border-radius:999px}
+.ftag.dp{color:var(--a);background:var(--ag)}.ftag.tr{color:var(--p);background:var(--pg)}
+.ftag.ar{color:var(--gr);background:var(--grg)}.ftag.rt{color:var(--o);background:var(--og)}
+.ftag.dm{color:var(--m);background:rgba(255,255,255,0.05)}
+.chv{color:var(--d);transition:transform .3s;font-size:10px}.fl.on .chv{transform:rotate(90deg)}
+.fb{max-height:0;opacity:0;overflow:hidden;transition:all .35s;padding:0 16px}
+.fbi{border-top:1px solid var(--b);padding-top:8px}
+.dr{display:flex;justify-content:space-between;padding:3px 0;font-size:11px;gap:10px}.dr .l{color:var(--m);flex-shrink:0}.dr .v{font-weight:600;text-align:right}
+.mono{font-family:ui-monospace,Menlo,monospace;color:var(--a)}
+
+/* Day selector */
+.dsel{display:flex;gap:6px;overflow-x:auto;padding:4px 0 8px;scrollbar-width:none}.dsel::-webkit-scrollbar{display:none}
+.db{flex-shrink:0;padding:10px 14px;background:var(--g);border:1px solid var(--b);border-radius:10px;cursor:pointer;text-align:center;transition:all .25s;min-width:82px;user-select:none}
+.db:hover{background:var(--g2);border-color:var(--b2)}
+.db.on{background:linear-gradient(135deg,rgba(125,255,170,0.1),rgba(90,209,255,0.06));border-color:rgba(125,255,170,0.25)}
+.db .dd{font-size:9px;font-weight:700;text-transform:uppercase;letter-spacing:1px;color:var(--d);margin-bottom:1px}
+.db.on .dd{color:var(--gr)}
+.db .dn{font-size:13px;font-weight:800;letter-spacing:-0.3px}
+.db .dt{font-size:8px;color:var(--d);margin-top:1px}
+.db.ev{position:relative}.db.ev::after{content:'';position:absolute;top:6px;right:6px;width:5px;height:5px;border-radius:50%;background:var(--gd)}
+
+/* Day content */
+.dc{background:var(--g);border:1px solid var(--b);border-radius:var(--r);padding:20px;margin-bottom:10px;min-height:200px;backdrop-filter:blur(12px);box-shadow:0 4px 24px rgba(0,0,0,0.2),inset 0 1px 0 rgba(255,255,255,0.04)}
+.dct{font-size:12px;font-weight:700;color:var(--a);text-transform:uppercase;letter-spacing:1px;margin-bottom:4px}
+.dcs{font-size:17px;font-weight:800;letter-spacing:-0.4px;margin-bottom:16px}
+.dci{display:flex;gap:14px;padding:6px 0;border-bottom:1px solid var(--s)}
+.dci:last-of-type{border:none}
+.dctm{font-family:ui-monospace,Menlo,monospace;font-size:11px;font-weight:700;color:var(--a);min-width:64px;flex-shrink:0}
+.dctx{font-size:12px;color:var(--m);line-height:1.5}
+.dctx strong{color:var(--t)}
+.dcn{margin-top:12px;padding:10px 14px;background:rgba(255,255,255,0.03);border-radius:8px;font-size:11px;color:var(--d);border-left:2px solid var(--a)}
+.dcf{margin-top:8px;padding:10px 14px;background:rgba(251,191,36,0.05);border-radius:8px;font-size:11px;color:var(--m);border-left:2px solid var(--gd)}
+.dcf strong{color:var(--t)}
+
+/* Two-col cards (Hakone / Disney / teamLab) */
+.spot{background:var(--g);border:1px solid var(--b);border-radius:var(--r);padding:18px 20px;margin-bottom:18px;backdrop-filter:blur(12px);box-shadow:0 4px 24px rgba(0,0,0,0.2),inset 0 1px 0 rgba(255,255,255,0.04)}
+.spot h3{font-size:14px;font-weight:800;margin-bottom:8px;display:flex;align-items:center;gap:8px}
+.spot p{font-size:12px;color:var(--m);margin-bottom:6px}
+.spot p strong{color:var(--t)}
+.dtgrid{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:18px}
+
+/* Callouts */
+.callout-gold{background:rgba(251,191,36,0.06);border:1px solid rgba(251,191,36,0.2);border-radius:var(--r);padding:14px 16px;margin-bottom:14px;font-size:12px;color:var(--m)}
+.callout-gold strong{color:var(--t)}
+
+/* Generic tables */
+.twrap{overflow-x:auto;margin-bottom:8px;border-radius:var(--r)}
+table.dt{width:100%;border-collapse:collapse;font-size:11.5px;min-width:520px;background:var(--g);border:1px solid var(--b);border-radius:var(--r)}
+table.dt th{text-align:left;font-size:9px;text-transform:uppercase;letter-spacing:.5px;color:var(--d);padding:10px 12px;border-bottom:1px solid var(--b);white-space:nowrap;font-weight:700}
+table.dt td{padding:9px 12px;border-bottom:1px solid var(--s);color:var(--m);vertical-align:top}
+table.dt td strong{color:var(--t)}
+table.dt tr:last-child td{border-bottom:none}
+
+/* Budget */
+.price{background:var(--g);border:1px solid var(--b);border-radius:var(--r);padding:18px;margin-bottom:18px;backdrop-filter:blur(12px)}
+.price h3{font-size:14px;font-weight:700;margin-bottom:12px}
+.pr{display:flex;justify-content:space-between;padding:6px 0;border-bottom:1px solid var(--s);font-size:12px;gap:10px}
+.pr:last-of-type{border:none}
+.pr .l{color:var(--m)}.pr .v{font-weight:700;font-family:ui-monospace,Menlo,monospace;text-align:right}
+.pr.total{border-top:1px solid var(--b);margin-top:4px;padding-top:10px}
+.pr.total .l{color:var(--t);font-weight:800}.pr.total .v{color:var(--a);font-size:13.5px}
+.price .note{font-size:10.5px;color:var(--d);margin-top:10px;line-height:1.6}
+
+/* Checklists */
+.todo{background:var(--g);border:1px solid var(--b);border-radius:var(--r);padding:16px;margin-bottom:12px;backdrop-filter:blur(12px)}
+.todo h3{font-size:13px;font-weight:700;margin-bottom:8px}
+.tbar{height:4px;background:rgba(255,255,255,0.06);border-radius:2px;margin-bottom:4px;overflow:hidden}
+.tfill{height:100%;background:linear-gradient(90deg,var(--a),var(--gr));border-radius:2px;transition:width .4s}
+.tct{font-size:10px;color:var(--d);text-align:right;margin-bottom:8px}
+.ti{display:flex;align-items:center;gap:10px;padding:7px 0;border-bottom:1px solid var(--s);cursor:pointer;transition:opacity .2s;user-select:none}
+.ti:last-child{border:none}
+.ti.done{opacity:.35;text-decoration:line-through}
+.tc{width:18px;height:18px;border-radius:50%;border:2px solid var(--d);display:flex;align-items:center;justify-content:center;font-size:10px;color:transparent;flex-shrink:0;transition:all .2s}
+.ti.done .tc{border-color:var(--gr);background:var(--grg);color:var(--gr)}
+.tt{font-size:12px;color:var(--m)}
+
+/* Map */
+.map-card{background:var(--g);border:1px solid var(--b);border-radius:var(--r);overflow:hidden;margin-bottom:8px}
+.map-card svg{width:100%;display:block}
+.map-leg{display:flex;gap:12px;padding:10px 16px;border-top:1px solid var(--b);flex-wrap:wrap}
+.ml{display:flex;align-items:center;gap:5px;font-size:10px;color:var(--m)}
+.mld{width:6px;height:6px;border-radius:50%}
+
+/* Warnings */
+.warnbox{background:var(--g);border:1px solid var(--redg);border-left:3px solid var(--red);border-radius:var(--r);padding:16px 18px;margin-bottom:18px;backdrop-filter:blur(12px)}
+.warnitem{display:flex;gap:10px;padding:9px 0;border-bottom:1px solid var(--s);font-size:12px;color:var(--m);line-height:1.55}
+.warnitem:last-child{border:none}
+.warnitem b{color:var(--t)}
+.warnnum{color:var(--red);font-weight:800;flex-shrink:0}
+
+/* Footer */
+.footer{text-align:center;padding:40px 0 20px;font-size:11px;color:var(--d)}
+.footer span{font-weight:700;color:var(--m)}
+.footer .navlinks{margin-bottom:8px;font-size:11px}
+.footer .navlinks a{margin:0 6px}
+
+/* Light mode */
+body.light{background:#f5f5f0;color:#1a1a2e}
+body.light .orb{opacity:.08}
+body.light .st,body.light .fl,body.light .hotel,body.light .dc,body.light .price,body.light .todo,body.light .map-card,body.light .banner,body.light .spot,body.light .warnbox,body.light table.dt,body.light .callout-gold{background:rgba(255,255,255,0.7);border-color:rgba(0,0,0,0.08);box-shadow:0 2px 12px rgba(0,0,0,0.06),inset 0 1px 0 rgba(255,255,255,0.8)}
+body.light .warnbox{border-left:3px solid var(--red)}
+body.light .fl:hover,body.light .hotel:hover{box-shadow:0 4px 20px rgba(0,0,0,0.1)}
+body.light .db,body.light .mchip{background:rgba(255,255,255,0.6);border-color:rgba(0,0,0,0.06)}
+body.light .db.on{background:rgba(125,255,170,0.08);border-color:rgba(125,255,170,0.2)}
+body.light .hero{background:linear-gradient(135deg,#e8d5f5,#d5e8f5,#f5f5f0)}
+body.light .badge{background:rgba(0,0,0,0.05);border-color:rgba(0,0,0,0.1);color:#1a6b8a}
+body.light .hero h1{color:#1a1a2e}
+body.light .hero .sub{color:rgba(26,26,46,.7)}
+body.light .hero .sub2{color:rgba(26,26,46,.45)}
+body.light .sec h2{color:#1a1a2e}
+body.light .stl,body.light .dd{color:#888}
+body.light .fm h3{color:#1a1a2e}
+body.light .tt{color:#555}
+body.light table.dt td{color:#555}
+body.light table.dt th{color:#888}
+body.light .dcf{background:rgba(251,191,36,0.1)}
+body.light .footer{color:#999}
+
+@media(max-width:640px){
+  .stats{grid-template-columns:repeat(2,1fr)}
+  .bgrid{grid-template-columns:1fr}
+  .fh{flex-direction:column;align-items:flex-start;gap:6px}
+  .fhr{align-self:flex-end}
+  .dtgrid{grid-template-columns:1fr}
+}
+</style>
+</head>
+<body>
+
+<!-- Ambient orbs -->
+<div class="orb o1"></div>
+<div class="orb o2"></div>
+<div class="orb o3"></div>
+
+<!-- Theme toggle -->
+<button class="theme-btn" id="themeToggle">☀️</button>
+
+<div class="w">
+
+<!-- ===== HERO ===== -->
+<div class="hero">
+  <div class="plane-wrap">
+    <svg viewBox="0 0 900 260" style="width:100%;height:100%">
+      <defs><linearGradient id="trailGrad" x1="0" y1="0" x2="1" y2="0"><stop offset="0%" stop-color="transparent"/><stop offset="50%" stop-color="rgba(90,209,255,0.5)"/><stop offset="100%" stop-color="transparent"/></linearGradient></defs>
+      <path class="contrail" d="M-50,190 Q300,40 500,110 T950,70"/>
+      <g transform="translate(480,105) rotate(-15) scale(0.6)">
+        <path d="M0,0 L-8,4 L-25,15 L-27,12 L-12,4 L-30,4 L-35,10 L-37,9 L-33,2 L-37,0 L-33,-2 L-37,-9 L-35,-10 L-30,-4 L-12,-4 L-27,-12 L-25,-15 L-8,-4 Z" fill="rgba(255,255,255,0.9)" filter="drop-shadow(0 0 6px rgba(90,209,255,0.6))"/>
+      </g>
+    </svg>
+  </div>
+  <div class="hero-c">
+    <div class="badge">✈ TravelWings</div>
+    <h1>Nhật Bản · Kanto — 10 Ngày</h1>
+    <div class="sub">~18–28/08/2026 · Ở nhà chị Hồng · Đoàn thầy Đức</div>
+    <div class="sub2">Chốt: Đức · Thảo (bầu) · mẹ Hường  ·  Khả năng: Tuấn Anh+con · Xuân Quỳnh · Khải · Bắp (🔢 chưa chốt headcount)</div>
+  </div>
+</div>
+
+<!-- ===== VISA CRITICAL BANNER — nổi bật nhất trang ===== -->
+<div class="banner" style="background:linear-gradient(135deg,rgba(255,59,92,0.12),rgba(255,122,89,0.06),rgba(90,209,255,0.03));border:1px solid rgba(255,59,92,0.35)">
+  <div class="banner-top">
+    <div class="banner-logo visa-icon" style="background:var(--redg)">🔴</div>
+    <div class="banner-title">VISA CRITICAL <span style="color:var(--red)">— Hạn nộp ≤ 20/07/2026</span></div>
+  </div>
+  <div class="countdown" id="visaCountdown">⏳ Đang tính số ngày còn lại…</div>
+  <div class="bgrid">
+    <div class="bd"><div class="bi" style="background:var(--redg)">📍</div><div><strong>Không có đại lý ở Nha Trang</strong>Nộp qua đại lý ủy thác <strong>TP.HCM</strong> (Saigontourist/Vietravel/VFS Global…) — gửi hồ sơ chuyển phát</div></div>
+    <div class="bd"><div class="bi" style="background:var(--og)">💰</div><div><strong>Phí visa 2.590.000đ</strong>1 lần (hiệu lực từ 01/07/2026) · nhiều lần 5.170.000đ + phí dịch vụ đại lý ~300k-1tr</div></div>
+    <div class="bd"><div class="bi" style="background:var(--redg)">☎️</div><div><strong>Việc #1 tuần này: gọi đại lý</strong>04-07/07 — xác nhận 2-3 đại lý HCM có nhận hồ sơ chuyển phát từ Nha Trang không (SPOF chưa xác nhận)</div></div>
+    <div class="bd"><div class="bi" style="background:var(--pg)">❗</div><div><strong>Hồ sơ 1 thành viên cần ngày trượt cũ</strong>Hỏi ngày bị từ chối visa lần trước + mục đích (quy tắc cấm nộp lại cùng mục đích trong 6 tháng)</div></div>
+  </div>
+  <div class="miles">
+    <div class="mchip"><strong>Chuẩn bị</strong>03-08/07</div>
+    <div class="marrow">→</div>
+    <div class="mchip"><strong>Gửi hồ sơ</strong>10-20/07</div>
+    <div class="marrow">→</div>
+    <div class="mchip" style="border-color:rgba(255,59,92,0.4);color:var(--red)"><strong style="color:var(--red)">Nộp hạn chót</strong>≤20/07</div>
+    <div class="marrow">→</div>
+    <div class="mchip"><strong>Kết quả</strong>đầu 08</div>
+    <div class="marrow">→</div>
+    <div class="mchip"><strong>Nhận hộ chiếu</strong>≤14/08</div>
+    <div class="marrow">→</div>
+    <div class="mchip"><strong>Bay</strong>18/08</div>
+  </div>
+</div>
+
+<!-- ===== STATS ===== -->
+<div class="stats">
+  <div class="st"><div class="stv b">10</div><div class="stl">Ngày</div></div>
+  <div class="st"><div class="stv o">~28</div><div class="stl">Tuần thai (chiều về)</div></div>
+  <div class="st"><div class="stv r">1</div><div class="stl">Visa deadline</div></div>
+  <div class="st"><div class="stv gd">🍜</div><div class="stl">Ưu tiên #1</div></div>
+</div>
+
+<!-- ===== ROUTE MAP ===== -->
+<div class="sec"><h2>🗺️ Route</h2><div class="ln"></div></div>
+<div class="map-card">
+  <svg viewBox="0 0 900 180">
+    <rect width="900" height="180" fill="#0d0d14"/>
+    <pattern id="gdots" x="0" y="0" width="30" height="30" patternUnits="userSpaceOnUse"><circle cx="15" cy="15" r="0.5" fill="rgba(255,255,255,0.04)"/></pattern>
+    <rect width="900" height="180" fill="url(#gdots)"/>
+    <path d="M 150,100 Q 450,20 750,90" fill="none" stroke="rgba(90,209,255,0.3)" stroke-width="2" stroke-dasharray="8,4">
+      <animate attributeName="stroke-dashoffset" from="100" to="0" dur="3s" repeatCount="indefinite"/>
+    </path>
+    <circle cx="150" cy="100" r="6" fill="#5ad1ff"><animate attributeName="r" values="6;8;6" dur="2s" repeatCount="indefinite"/></circle>
+    <circle cx="750" cy="90" r="6" fill="#7dffaa"/>
+    <text x="150" y="125" fill="#8a8a99" font-size="10" font-family="system-ui" text-anchor="middle">HÀ NỘI (HAN)</text>
+    <text x="750" y="115" fill="#8a8a99" font-size="10" font-family="system-ui" text-anchor="middle">TOKYO (HND)</text>
+    <text x="450" y="50" fill="#50506a" font-size="9" font-family="system-ui" text-anchor="middle">Haneda ưu tiên — gần trung tâm hơn Narita</text>
+  </svg>
+  <div class="map-leg">
+    <div class="ml"><div class="mld" style="background:var(--a)"></div>Hà Nội (HAN)</div>
+    <div class="ml"><div class="mld" style="background:var(--gr)"></div>Tokyo Haneda (HND)</div>
+  </div>
+</div>
+<div class="cap">HND: Tokyo Monorail 13'/¥500 hoặc Keikyu 11'/¥330 vào trung tâm · NRT xa hơn ~gấp 3 nhưng vé thường rẻ hơn.</div>
+
+<!-- ===== CHUYẾN BAY KHUYẾN NGHỊ ===== -->
+<div class="sec"><h2>✈️ Chuyến Bay Khuyến Nghị</h2><div class="ln"></div></div>
+<div class="fl" onclick="this.classList.toggle('on')">
+  <div class="fh">
+    <div class="fhl">
+      <div class="flogo">🇻🇳</div>
+      <div class="fm"><h3>Vietnam Airlines · HAN → HND (Tokyo)</h3><div class="s">Khuyến nghị — chưa đặt, chờ visa</div></div>
+    </div>
+    <div class="fhr"><span class="ftag dm">Chưa đặt</span><span class="chv">▶</span></div>
+  </div>
+  <div class="fb"><div class="fbi">
+    <div class="dr"><span class="l">Hãng khuyến nghị</span><span class="v">Vietnam Airlines (VNA)</span></div>
+    <div class="dr"><span class="l">Vì sao</span><span class="v">An toàn nhất chặng về cho thai 28-30 tuần — &lt;32 tuần không cần giấy bác sĩ</span></div>
+    <div class="dr"><span class="l">Sân bay</span><span class="v">HND (gần trung tâm) &gt; NRT (thường rẻ hơn)</span></div>
+    <div class="dr"><span class="l">Trạng thái</span><span class="v">⚠️ Chưa đặt — chờ kết quả visa đầu 08, hoặc chọn vé hoàn/đổi được</span></div>
+    <div class="dr"><span class="l">Giá vé</span><span class="v">⚠️ CHƯA XÁC MINH — tự mở Google Flights, cửa sổ đi 17-20/08 / về 27-28/08</span></div>
+  </div></div>
+</div>
+
+<div class="cap" style="margin-top:10px">So sánh chính sách bay cho bà bầu (chặng về ~28-30 tuần) <span class="tag warn">⚠️ chưa verify EDD</span></div>
+<div class="twrap">
+<table class="dt">
+  <tr><th>Hãng</th><th>Quy định 28-30 tuần (chiều về)</th><th>Kết luận</th></tr>
+  <tr><td><strong>Vietnam Airlines</strong></td><td>&lt;32 tuần <strong>không cần giấy</strong>; 32-&lt;36 tuần cần giấy (≤7 ngày); ≥36 tuần từ chối</td><td><strong style="color:var(--gr)">★ An toàn nhất</strong> — tính theo tuần thai tuyệt đối</td></tr>
+  <tr><td><strong>ANA / JAL</strong></td><td>Tính theo <strong>số ngày tới dự sinh</strong>; cần MEDIF nếu ≤28 ngày</td><td>Phụ thuộc EDD <span class="tag ask">❓ chờ thầy</span></td></tr>
+  <tr><td><strong>Vietjet</strong></td><td>27-32 tuần <strong>bắt buộc giấy bác sĩ</strong>; &gt;32 tuần từ chối</td><td><strong style="color:var(--o)">⚠️ Rủi ro cao nhất</strong></td></tr>
+</table>
+</div>
+
+<!-- ===== LỊCH TRÌNH 10 NGÀY ===== -->
+<div class="sec"><h2>🗾 Lịch Trình 10 Ngày</h2><div class="ln"></div></div>
+<div class="cap">🔢 = tuỳ số người đoàn (chưa chốt) · 🍜 = ưu tiên ăn uống mỗi ngày · nhịp chậm cho bà bầu: ngoài trời 6h-9h → nghỉ điều hòa 11h-15h → ra lại 16h-19h</div>
+<div class="dsel" id="dsel">
+  <div class="db on" data-d="0"><div class="dd">Ngày 1</div><div class="dn">18/08</div><div class="dt">Đến HND</div></div>
+  <div class="db" data-d="1"><div class="dd">Ngày 2</div><div class="dn">19/08</div><div class="dt">Nghỉ ngơi</div></div>
+  <div class="db" data-d="2"><div class="dd">Ngày 3</div><div class="dn">20/08</div><div class="dt">Asakusa</div></div>
+  <div class="db" data-d="3"><div class="dd">Ngày 4</div><div class="dn">21/08</div><div class="dt">Shibuya</div></div>
+  <div class="db ev" data-d="4"><div class="dd">Ngày 5</div><div class="dn">22/08</div><div class="dt">Tsukiji 🍜</div></div>
+  <div class="db" data-d="5"><div class="dd">Ngày 6</div><div class="dn">23/08</div><div class="dt">Kamakura</div></div>
+  <div class="db" data-d="6"><div class="dd">Ngày 7</div><div class="dn">24/08</div><div class="dt">Hakone</div></div>
+  <div class="db" data-d="7"><div class="dd">Ngày 8</div><div class="dn">25/08</div><div class="dt">Hakone→TYO</div></div>
+  <div class="db" data-d="8"><div class="dd">Ngày 9</div><div class="dn">26/08</div><div class="dt">teamLab</div></div>
+  <div class="db" data-d="9"><div class="dd">Ngày 10</div><div class="dn">27/08</div><div class="dt">Bay về</div></div>
+</div>
+<div class="dc" id="dc"></div>
+<div class="cap">Có thể đệm thêm 1 ngày, dời bay về <strong>28/08 (Thứ 6)</strong> nếu cần — vẫn trong ngưỡng khuyến nghị. <strong>KHÔNG khuyến nghị về sau 28/08.</strong></div>
+
+<!-- ===== HAKONE SPOTLIGHT ===== -->
+<div class="sec"><h2>🏔️ Hakone Spotlight</h2><div class="ln"></div></div>
+<div class="spot">
+  <h3>⛩️ Hakone — Ngày 7-8 (24-25/08)</h3>
+  <p><strong>Hakone Freepass ¥7.100</strong> — gồm tàu + cáp treo + phà + bus, đi Owakudani & hồ Ashi.</p>
+  <p><strong>Onsen kashikiri (riêng)</strong> — OK cho bà bầu <span class="tag ok">✅ đã verify</span>: Nhật gỡ cấm từ 2014; nước ≤40°C, ngâm ≤10 phút, đủ nước, không ngâm một mình, hỏi bác sĩ trước. Ưu tiên đặt ryokan có bồn riêng thay bồn chung.</p>
+  <p>❌ <strong>Không thuê van riêng</strong> (~¥32-45k/người theo research — phá ngân sách).</p>
+</div>
+
+<!-- ===== DISNEY & TEAMLAB ===== -->
+<div class="sec"><h2>🎢 Disney &amp; teamLab</h2><div class="ln"></div></div>
+<div class="dtgrid">
+  <div class="spot" style="margin-bottom:0">
+    <h3>🏰 Disneyland/DisneySea <span class="tag ask">🔢 tuỳ có trẻ</span></h3>
+    <p>Giá người lớn: <strong>7.900-10.900 JPY</strong> <span class="tag ok">✅</span></p>
+    <p>Giá trẻ em: <strong>4.700-5.600 JPY</strong> <span class="tag warn">⚠️ chưa verify</span></p>
+    <p>Ngày gợi ý: 23/08 (CN) — ⚠️ đông + giá cuối tuần cao nhất, cân nhắc dời sang ngày thường nếu lịch cho phép.</p>
+  </div>
+  <div class="spot" style="margin-bottom:0">
+    <h3>🎨 teamLab</h3>
+    <p><strong>teamLab Planets</strong>: từ 3.600 JPY (dynamic, cuối tuần cao hơn)</p>
+    <p><strong>teamLab Borderless</strong>: 3.600-5.600 JPY <span class="tag ok">✅</span></p>
+    <p>Xếp Ngày 9 (26/08, Thứ 4 — ngày thường rẻ hơn); đặt vé trước, hay cháy vé.</p>
+  </div>
+</div>
+
+<!-- ===== ẨM THỰC — ƯU TIÊN #1 ===== -->
+<div class="sec"><h2>🍜 Ẩm Thực — Ưu Tiên #1</h2><div class="ln"></div></div>
+<div class="callout-gold">
+  ⚠️ <strong>Ràng buộc Thảo (bà bầu)</strong> <span class="tag ok">✅ verify MHLW</span> — tránh sashimi/sushi sống, <strong>trứng sống</strong> (kể cả trứng chấm sukiyaki — bỏ trứng), cá thuỷ ngân cao ≤80g/tuần (maguro, cá kiếm, cá biển sâu), phô mai mềm chưa tiệt trùng. Ưu tiên <strong>đồ nấu chín</strong>; quán uy tín/chuỗi lớn an toàn hơn quán vỉa hè lạ.
+</div>
+<div class="twrap">
+<table class="dt">
+  <tr><th>Trải nghiệm</th><th>Khu vực</th><th>Món / cách</th><th>Giá ước (/người)</th></tr>
+  <tr><td><strong>Tsukiji Outer Market</strong></td><td>Tsukiji, Chuo</td><td>Đồ chín: tamagoyaki nướng, gyoza, unagi nướng, wagyu skewers — <strong>né sashimi cho Thảo</strong></td><td>¥300-1.500/món, no ~¥2.000-3.000</td></tr>
+  <tr><td><strong>Yakiniku</strong> (nướng bàn)</td><td>Ueno / Shinjuku</td><td>Tự nướng chín — an toàn bà bầu; buffet tabehoudai rẻ</td><td>¥3.000-6.000</td></tr>
+  <tr><td><strong>Tempura</strong></td><td>Asakusa (Daikokuya) / Tsukiji</td><td>Set tôm/rau chiên nóng</td><td>¥2.000-3.000</td></tr>
+  <tr><td><strong>Unagi</strong> (lươn nướng)</td><td>Asakusa</td><td>Chín, bổ, rất hợp bà bầu</td><td>¥3.000-5.000</td></tr>
+  <tr><td><strong>Ramen</strong></td><td>Ichiran / Ippudo khắp Tokyo</td><td>Dễ ăn cho cả người già + trẻ</td><td>¥900-1.500</td></tr>
+  <tr><td><strong>Tonkatsu</strong></td><td>Shinjuku / Ueno</td><td>Set cơm chín</td><td>¥1.500-2.500</td></tr>
+  <tr><td><strong>Shabu-shabu / Sukiyaki</strong></td><td>Ikebukuro / Ginza / Ningyocho</td><td>Tự nhúng chín — <strong>bỏ trứng sống</strong></td><td>¥3.000-5.000</td></tr>
+  <tr><td><strong>Teishoku</strong> (cơm phần)</td><td>Khắp nơi, food hall trong ga</td><td>Cá/thịt kho + miso + cơm — luôn chín, rẻ, lành</td><td>¥800-1.500</td></tr>
+  <tr><td><strong>Phở/cơm Việt</strong></td><td>Shin-Okubo</td><td>Cộng đồng Việt, đồ chín, rẻ — đổi vị cho mẹ Hường</td><td>¥800-1.500</td></tr>
+</table>
+</div>
+<div class="cap">Khu ăn rẻ: Ameyoko (Ueno), Shin-Okubo, Ikebukuro, food hall trong ga (ekinaka). Baseline tiết kiệm: konbini ¥500-750 · gyudon ¥450-700 — nhưng không nên ăn konbini xuyên 10 ngày cho bà bầu (natri cao, thiếu rau/đạm tươi) → xen teishoku/cơm phần.</div>
+
+<!-- ===== NGÂN SÁCH ===== -->
+<div class="sec"><h2>💰 Ngân Sách / Người · 10 Ngày</h2><div class="ln"></div></div>
+<div class="price">
+  <h3>💳 Ước tính /người (chưa gồm vé bay)</h3>
+  <div class="pr"><span class="l">🍜 Ăn (mix konbini/gyudon/teishoku, đồ chín)</span><span class="v mono">¥18.000-24.000</span></div>
+  <div class="pr"><span class="l">🚃 Đi lại local (subway/bus, Suica)</span><span class="v mono">¥8.000-15.000</span></div>
+  <div class="pr"><span class="l">📶 eSIM data</span><span class="v mono">¥2.100-2.700</span></div>
+  <div class="pr"><span class="l">🩺 Dự phòng (thuốc/đồ bà bầu/taxi khi mệt)</span><span class="v mono">¥12.000-18.000</span></div>
+  <div class="pr"><span class="l">🎫 Vé tham quan (teamLab + Shibuya Sky + Hakone Freepass + vé lẻ)</span><span class="v mono">¥15.000-19.400</span></div>
+  <div class="pr total"><span class="l">Tổng (không Disney)</span><span class="v">≈¥55.100-79.100 · ~9,1-13,1 triệu VND</span></div>
+  <div class="pr total" style="border-top:none;padding-top:0"><span class="l">Tổng (có Disney +7.900-10.900) <span class="tag ask">🔢</span></span><span class="v">≈¥63.000-90.000 · ~10,5-14,9 triệu VND</span></div>
+  <div class="note">
+    Chưa gồm: vé máy bay, quà/mua sắm, chỗ ở thuê thêm, chi phí y tế nếu Thảo cần khám. Dự phòng thêm 15-20% cho đoàn có bà bầu/trẻ nhỏ.<br>
+    <strong>Vé máy bay</strong> <span class="tag warn">⚠️ chưa xác minh</span> — pattern HAN-NRT ~9,8-12,8tr, HAN-HND ~16,9-22,5tr/người khứ hồi (evergreen, chưa fetch được giá thật) — tự mở Google Flights gần ngày bay.<br>
+    Tỷ giá dùng: ~166 VND/JPY (02/07/2026).
+  </div>
+</div>
+
+<!-- ===== CHECKLIST THEO DEADLINE ===== -->
+<div class="sec"><h2>☑️ Checklist Theo Deadline</h2><div class="ln"></div></div>
+
+<div class="todo" id="t1">
+  <h3>🔥 Tuần này (03-08/07 — trước khi đi NT 09/07)</h3><div class="tbar"><div class="tfill" style="width:0%"></div></div><div class="tct">0/6</div>
+  <div class="ti" onclick="tg(this)"><div class="tc">✓</div><div class="tt">Chốt EDD/ngày dự sinh Thảo + xin giấy bác sĩ (quyết hãng bay) <span class="tag ask">❓</span></div></div>
+  <div class="ti" onclick="tg(this)"><div class="tc">✓</div><div class="tt">Hỏi 1 thành viên từng trượt: cần ngày trượt cũ + mục đích (quy tắc 6 tháng) <span class="tag ask">❓</span></div></div>
+  <div class="ti" onclick="tg(this)"><div class="tc">✓</div><div class="tt">Hỏi chị Hồng: quan hệ (huyết thống 3 đời?) + địa chỉ cụ thể <span class="tag ask">❓</span></div></div>
+  <div class="ti" onclick="tg(this)"><div class="tc">✓</div><div class="tt">Chốt danh sách đoàn sơ bộ (Bắp/Tuấn Anh+con/Khải/Xuân Quỳnh)</div></div>
+  <div class="ti" onclick="tg(this)"><div class="tc">✓</div><div class="tt">Chuẩn bị hồ sơ visa (hộ chiếu gốc, ảnh, sao kê 3-6th, HĐLĐ, sổ tiết kiệm, lịch trình)</div></div>
+  <div class="ti" onclick="tg(this)"><div class="tc">✓</div><div class="tt">Gọi 2-3 đại lý HCM (04-07/07) hỏi quy trình nhận hồ sơ chuyển phát từ Nha Trang <span class="tag crit">🔴 SPOF</span></div></div>
+</div>
+
+<div class="todo" id="t2">
+  <h3>📮 10-20/07</h3><div class="tbar"><div class="tfill" style="width:0%"></div></div><div class="tct">0/2</div>
+  <div class="ti" onclick="tg(this)"><div class="tc">✓</div><div class="tt">Gửi hồ sơ chuyển phát từ Nha Trang về đại lý HCM đã xác nhận</div></div>
+  <div class="ti" onclick="tg(this)"><div class="tc">✓</div><div class="tt">Nộp muộn nhất ≤20/07 <span class="tag crit">Hạn chót</span></div></div>
+</div>
+
+<div class="todo" id="t3">
+  <h3>🎫 Đầu 08</h3><div class="tbar"><div class="tfill" style="width:0%"></div></div><div class="tct">0/3</div>
+  <div class="ti" onclick="tg(this)"><div class="tc">✓</div><div class="tt">Nhận kết quả visa → mới đặt vé (hoặc vé hoàn/đổi được nếu buộc đặt sớm)</div></div>
+  <div class="ti" onclick="tg(this)"><div class="tc">✓</div><div class="tt">Đặt nôi infant, ghế ngồi gần nhau; đặt ryokan Hakone (bồn onsen riêng) <span class="tag ask">🔢</span></div></div>
+  <div class="ti" onclick="tg(this)"><div class="tc">✓</div><div class="tt">Đặt slot Shibuya Sky / teamLab / Disney <span class="tag ask">🔢</span></div></div>
+</div>
+
+<div class="todo" id="t4">
+  <h3>🛫 Trước bay (≤7 ngày)</h3><div class="tbar"><div class="tfill" style="width:0%"></div></div><div class="tct">0/3</div>
+  <div class="ti" onclick="tg(this)"><div class="tc">✓</div><div class="tt">Khám thai + giấy "Fit to Travel" &lt;7 ngày (2 bản tiếng Anh) nếu hãng yêu cầu</div></div>
+  <div class="ti" onclick="tg(this)"><div class="tc">✓</div><div class="tt">Quét lại lịch hanabi trên walkerplus.com (cuối 07) <span class="tag warn">⚠️</span></div></div>
+  <div class="ti" onclick="tg(this)"><div class="tc">✓</div><div class="tt">Gọi xác nhận bệnh viện sản Tokyo (Japanese Red Cross Medical Center)</div></div>
+</div>
+
+<!-- ===== CẢNH BÁO ===== -->
+<div class="sec"><h2>⚠️ Cảnh Báo Cứng</h2><div class="ln"></div></div>
+<div class="warnbox">
+  <div class="warnitem"><span class="warnnum">1</span><div>🌡️ <b>Nắng nóng tháng 8:</b> 31°C trung bình, cảm nhận 38-40°C, mùa bão → tuân nhịp 6-9h ngoài trời / nghỉ 11-15h / ra lại 16-19h; mang nước, quạt, mũ.</div></div>
+  <div class="warnitem"><span class="warnnum">2</span><div>🤰 <b>Thai 28-30 tuần chặng về = ràng buộc CỨNG của ngày về.</b> Về càng muộn thai càng cao → càng dễ bị siết giấy/từ chối bay. Khuyến nghị về ≤28/08 (lý tưởng 27/08); VNA an toàn nhất chặng về.</div></div>
+  <div class="warnitem"><span class="warnnum">3</span><div>📅 <b>Deadline cứng 01/10/2026</b> (business) — chuyến về cuối 08 vẫn an toàn trước mốc này.</div></div>
+  <div class="warnitem"><span class="warnnum">4</span><div>✈️ <b>Không đặt vé trước khi có visa</b> (nhất là 1 thành viên) — hoặc chỉ vé hoàn/đổi được.</div></div>
+  <div class="warnitem"><span class="warnnum">5</span><div>🚫 <b>Không gọi "Visa Global Nha Trang"</b> — 2 hotline này nghi bịa trong research gốc, không có trong danh sách đại lý chính thức.</div></div>
+  <div class="warnitem"><span class="warnnum">6</span><div>🎆 <b>Lịch hanabi/lễ hội 17-30/08</b> <span class="tag warn">⚠️ chưa xác minh</span> cho 2026 — quét lại walkerplus.com cuối tháng 7.</div></div>
+  <div class="warnitem"><span class="warnnum">7</span><div>❓ <b>EDD Thảo vẫn chờ thầy chốt</b> <span class="tag ask">❓ chờ thầy</span> — mọi kết luận "hãng nào không cần giấy" đang treo trên EDD ước tính.</div></div>
+</div>
+
+<!-- ===== FOOTER ===== -->
+<div class="footer">
+  <div class="navlinks">Trip khác: <a href="travelwings-nha-trang.html">🇻🇳 Nha Trang</a></div>
+  <span>TravelWings</span> · Nhật Bản Kanto 2026 · Verified through 7-stage QA pipeline (03/07/2026) · Generated by Claude Code
+</div>
+
+</div>
+
+<script>
+// Day-by-day data
+const days=[
+  {t:"Thứ Ba, 18/08/2026",s:"Ngày 1 — Đến Tokyo, nghỉ ngơi",i:[
+    {t:"",d:"Bay đến <strong>sân bay Haneda (HND)</strong>"},
+    {t:"",d:"<strong>Tokyo Monorail</strong> (13 phút, ¥500) vào trung tâm"},
+    {t:"",d:"Về nghỉ tại <strong>nhà chị Hồng</strong> — ngày bay dài, không xếp lịch thêm"}
+  ],n:"Ngày bay, không xếp gì thêm.",f:"đơn giản gần nhà chị Hồng sau chuyến bay dài — Teishoku hoặc gyudon (Sukiya/Matsuya)"},
+  {t:"Thứ Tư, 19/08/2026",s:"Ngày 2 — Nghỉ ngơi, quen múi giờ",i:[
+    {t:"",d:"Nghỉ/dạo nhẹ quanh khu nhà chị Hồng"},
+    {t:"",d:"Mua <strong>Welcome Suica</strong>, kích hoạt eSIM"},
+    {t:"",d:"Đổi tiền / rút <strong>Seven Bank ATM</strong>"}
+  ],f:"Ramen (Ichiran/Ippudo) hoặc Teishoku quanh khu chị Hồng — dễ ăn, quen món trước khi ra ngoài nhiều"},
+  {t:"Thứ Năm, 20/08/2026",s:"Ngày 3 — Asakusa &amp; Ueno",i:[
+    {t:"6:00",d:"<strong>Senso-ji</strong> (Asakusa) — đi sớm tránh nóng &amp; đông"},
+    {t:"",d:"Trưa: <strong>Ueno / Ameyoko</strong> — nghỉ quán điều hòa lúc nắng gắt"}
+  ],n:"Khu ăn rẻ; trưa nghỉ quán điều hòa Ueno.",f:"Tempura/Unagi ở Asakusa (Daikokuya) trưa; đồ ăn vặt Ameyoko (Ueno) chiều"},
+  {t:"Thứ Sáu, 21/08/2026",s:"Ngày 4 — Shibuya &amp; Harajuku",i:[
+    {t:"",d:"Sớm: <strong>Meiji Jingu</strong>"},
+    {t:"",d:"<strong>Harajuku</strong> — Takeshita Street"},
+    {t:"",d:"<strong>Shibuya Sky</strong> (đặt online trước 14 ngày)"}
+  ],n:"❌ KHÔNG xếp Imperial Palace hôm nay — đóng cửa Thứ 2 &amp; Thứ 6.",f:"Ramen (Ichiran/Ippudo) quanh Shibuya/Harajuku — nhiều chi nhánh, dễ tìm"},
+  {t:"Thứ Bảy, 22/08/2026",s:"Ngày 5 — Tsukiji &amp; Ginza 🍜 (ưu tiên ăn uống #1)",i:[
+    {t:"6:00-9:00",d:"<strong>Tsukiji Outer Market</strong> — đúng nhịp ngoài trời sớm của bà bầu"},
+    {t:"",d:"Nghỉ trưa"},
+    {t:"",d:"<strong>Ginza</strong> + <strong>Imperial Palace East Garden</strong> (mở Thứ 7)"}
+  ],n:"teamLab phụ phí cuối tuần → để sang ngày thường (Ngày 9).",f:"Tsukiji sáng: tamagoyaki nướng, gyoza, unagi nướng — <strong>né sashimi cho Thảo</strong>; tối Shabu-shabu/Sukiyaki Ginza (bỏ trứng sống)"},
+  {t:"Chủ Nhật, 23/08/2026",s:"Ngày 6 — Kamakura/Enoshima (hoặc Disney nếu có trẻ 🔢)",i:[
+    {t:"",d:"<strong>Kamakura/Enoshima</strong> (Freepass ¥1.640) — hoặc <strong>Yokohama Minato Mirai + Chinatown</strong> (ít bậc thang hơn, hợp bà bầu)"},
+    {t:"",d:"HOẶC <strong>Tokyo Disneyland/DisneySea</strong> nếu có trẻ nhỏ 🔢 (xem card Disney phía trên)"}
+  ],n:"23/08 là Chủ Nhật — đông + giá cuối tuần cao nhất nếu chọn Disney; cân nhắc dời sang ngày thường nếu lịch cho phép.",f:"Teishoku/cơm phần dọc đường Kamakura-Enoshima — nếu chọn Disney thì ăn trong công viên"},
+  {t:"Thứ Hai, 24/08/2026",s:"Ngày 7 — Hakone (đi, nghỉ đêm 1)",i:[
+    {t:"",d:"<strong>Hakone Freepass</strong> ¥7.100 (tàu + cáp treo + phà + bus)"},
+    {t:"",d:"<strong>Owakudani</strong>, <strong>hồ Ashi</strong>"},
+    {t:"",d:"Nghỉ đêm ryokan — chọn bồn <strong>onsen riêng (kashikiri)</strong>"}
+  ],n:"❌ KHÔNG thuê van riêng (~¥32-45k/người — phá ngân sách).",f:"Teishoku/set cơm tại ryokan hoặc quán địa phương Hakone (chín, hợp bà bầu)"},
+  {t:"Thứ Ba, 25/08/2026",s:"Ngày 8 — Hakone → về Tokyo",i:[
+    {t:"",d:"Sáng: <strong>onsen riêng (kashikiri)</strong>"},
+    {t:"",d:"Về <strong>Tokyo</strong> — di chuyển liên phương tiện"}
+  ],n:"+30% buffer thời gian ngày này (di chuyển nặng).",f:"Teishoku/Tonkatsu ở food hall trong ga (ekinaka) trên đường về Tokyo"},
+  {t:"Thứ Tư, 26/08/2026",s:"Ngày 9 — teamLab Planets",i:[
+    {t:"",d:"<strong>teamLab Planets</strong> (ngày thường rẻ hơn — đặt vé trước)"},
+    {t:"",d:"Chiều: tự do / mua sắm"}
+  ],n:"Đặt teamLab trước — hay cháy vé.",f:"Yakiniku buffet (tabehoudai) Ueno/Shinjuku hoặc Tonkatsu — bữa no trước ngày cuối"},
+  {t:"Thứ Năm, 27/08/2026",s:"Ngày 10 — Bay về",i:[
+    {t:"",d:"Đóng gói tối hôm trước"},
+    {t:"",d:"Khám nhẹ nếu cần giấy y tế &lt;7 ngày"},
+    {t:"",d:"Ra sân bay, bay về"}
+  ],n:"Có thể đệm thêm 1 ngày, dời bay về 28/08 (Thứ 6) — vẫn trong ngưỡng khuyến nghị ≤28/08. KHÔNG khuyến nghị về sau 28/08.",f:"konbini/gyudon nhẹ trước khi ra sân bay — đơn giản, gọn"}
+];
+
+// Render day
+function rd(i){
+  const d=days[i],c=document.getElementById('dc');
+  let h='<div class="dct">'+d.t+'</div><div class="dcs">'+d.s+'</div>';
+  d.i.forEach(it=>{
+    h+='<div class="dci">'+(it.t?'<span class="dctm">'+it.t+'</span>':'<span class="dctm" style="opacity:.3">•</span>')+'<span class="dctx">'+it.d+'</span></div>';
+  });
+  if(d.n) h+='<div class="dcn">'+d.n+'</div>';
+  if(d.f) h+='<div class="dcf">🍜 <strong>Ăn:</strong> '+d.f+'</div>';
+  c.innerHTML=h;
+}
+document.querySelectorAll('.db').forEach(b=>{
+  b.addEventListener('click',()=>{
+    document.querySelectorAll('.db').forEach(x=>x.classList.remove('on'));
+    b.classList.add('on');
+    rd(+b.dataset.d);
+  });
+});
+rd(0);
+
+// Visa countdown (computed live so it never goes stale)
+(function(){
+  const el=document.getElementById('visaCountdown');
+  const deadline=new Date('2026-07-20T23:59:59+07:00');
+  const now=new Date();
+  const days=Math.ceil((deadline-now)/86400000);
+  if(days>1) el.textContent='⏳ Còn '+days+' ngày để nộp hồ sơ (hạn '+'20/07/2026)';
+  else if(days===1) el.textContent='⏳ Còn 1 ngày — nộp hồ sơ ngay hôm nay/mai!';
+  else if(days===0) el.textContent='🔴 HẠN CHÓT HÔM NAY — nộp ngay!';
+  else el.textContent='🔴 ĐÃ QUÁ HẠN 20/07 — kiểm tra ngay tình trạng hồ sơ với đại lý';
+})();
+
+// Checklists with localStorage
+const SK='tw-nhatban-2026';
+function ld(){try{return JSON.parse(localStorage.getItem(SK))||{}}catch{return{}}}
+function sv(s){localStorage.setItem(SK,JSON.stringify(s))}
+function gid(e){return e.querySelector('.tt').textContent.trim().slice(0,40)}
+function up(c){const a=c.querySelectorAll('.ti'),d=c.querySelectorAll('.ti.done').length,t=a.length,p=t?Math.round(d/t*100):0;c.querySelector('.tfill').style.width=p+'%';c.querySelector('.tct').textContent=d+'/'+t}
+function tg(e){e.classList.toggle('done');up(e.closest('.todo'));const s=ld();s[gid(e)]=e.classList.contains('done');sv(s)}
+(function(){const s=ld();document.querySelectorAll('.ti').forEach(e=>{if(s[gid(e)])e.classList.add('done')});document.querySelectorAll('.todo').forEach(up)})();
+
+// Theme toggle
+(function(){
+  const TK=SK+'-theme',b=document.body,btn=document.getElementById('themeToggle');
+  const saved=localStorage.getItem(TK);
+  if(saved==='light') b.classList.add('light');
+  function upBtn(){btn.textContent=b.classList.contains('light')?'🌙':'☀️'}
+  upBtn();
+  btn.addEventListener('click',()=>{
+    b.classList.toggle('light');
+    localStorage.setItem(TK,b.classList.contains('light')?'light':'dark');
+    upBtn();
+  });
+})();
+</script>
+</body>
+</html>
